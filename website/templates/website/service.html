@@ -1,0 +1,165 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+
+
+
+  <!-- Start of Banner Section -->
+  <div class="banner-container page">
+    <!-- Start of Banner Text -->
+    <div class="banner-text">
+      <h1>
+        Web Development Services <br> That Drives Leads & Sales
+
+      </h1>
+      <p>
+        We design high-performing websites for brands looking to grow. Strategy, design, development, and marketing – you get everything you need to grow.
+
+
+      </p>
+      <div class="work-with">
+        <a href="">Work with us</a>
+      </div>
+    </div>
+    <!-- End of Banner Text -->
+
+    <!-- Start of Banner Image -->
+    <div class="banner-img">
+      
+      <img src="{% static 'img/Website-Design-Banner-800x567.png' %}" alt="Slide" />     
+
+    </div>
+    <!-- End of Banner Image -->
+  </div>
+  <!-- End of Banner Section -->
+
+
+
+
+<!-- why choose us -->
+<div class="why-choose-us-container element">
+  <h2>Why Choose Maxibern?
+  </h2>
+  <p>Choose Maxibern because we make your business shine online with smart <br> solutions and friendly expertise, helping you grow and stand out in the digital world.
+
+  </p>
+
+  
+</div>
+
+
+
+<div class="service-col-container element ">
+  <div class="service-col">
+    <h3> Get Real Experts to Launch Your Site</h3>
+      <p>We have over six years of working experience in developing <br> responsive websites across various industries. We strive to meet your specific needs and exceed your expectations.</p>
+       <br>  
+
+     <p>   Over the years, we have developed a streamlined process <br> to work with our clients like you. That means you can rest assured that you’ll have a hassle-free experience with us. </p>
+ 
+  </div>
+  <div class="service-col">
+   <img src="{% static 'img/Asset-2-800x501.png' %}" alt="Slide" />   
+  </div>
+</div>
+
+<div class="service-col-container element second">
+
+  <div class="service-col">
+    <img src="{% static 'img/Website-Design-Banner-800x567.png' %}" alt="Slide" />   
+
+   </div>
+  <div class="service-col">
+    <h3> Get Real Experts to Launch Your Site</h3>
+      <p>We have over six years of working experience in developing <br> responsive websites across various industries. We strive to meet your specific needs and exceed your expectations.</p>
+       <br>  
+
+     <p>   Over the years, we have developed a streamlined process <br> to work with our clients like you. That means you can rest assured that you’ll have a hassle-free experience with us. </p>
+ 
+  </div>
+ 
+</div>
+
+<div class="service-col-container element">
+  <div class="service-col">
+    <h3> Get Real Experts to Launch Your Site</h3>
+      <p>We have over six years of working experience in developing <br> responsive websites across various industries. We strive to meet your specific needs and exceed your expectations.</p>
+       <br>  
+
+     <p>   Over the years, we have developed a streamlined process <br> to work with our clients like you. That means you can rest assured that you’ll have a hassle-free experience with us. </p>
+ 
+  </div>
+  <div class="service-col">
+   <img src="{% static 'img/Website-Design-Banner-800x567.png' %}" alt="Slide" />   
+
+  </div>
+</div>
+
+<div class="service-col-container element">
+  <div class="service-col">
+    
+    <img src="{% static 'img/SEO.jpg' %}" alt="Slide" />   
+
+   </div>
+  <div class="service-col">
+    <h3> Get Real Experts to Launch Your Site</h3>
+      <p>We have over six years of working experience in developing <br> responsive websites across various industries. We strive to meet your specific needs and exceed your expectations.</p>
+       <br>  
+
+     <p>   Over the years, we have developed a streamlined process <br> to work with our clients like you. That means you can rest assured that you’ll have a hassle-free experience with us. </p>
+ 
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+
+      menuIcon.addEventListener("click", () => {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show");
+      });
+
+      function handleAnimationScroll() {
+        // This block of code handles the reveal animation for elements on scroll
+        window.addEventListener("scroll", () => {
+          const targetElements = document.querySelectorAll(".element");
+
+          targetElements.forEach((element) => {
+            const position = element.getBoundingClientRect();
+            const threshold = window.innerHeight * 0.9;
+
+            // If the element's position is within the threshold, reveal it and trigger animation
+            if (position.top <= threshold) {
+              element.classList.add("slides");
+            }
+          });
+        });
+      }
+      handleAnimationScroll();
+    </script>
+  {% endblock %}

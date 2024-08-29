@@ -1,7 +1,481 @@
+
+
 {% extends 'website/base.html' %}
+{% load static %}
 
 {% block content %}
+<style>
+    .empower-container {
+        position: relative;
+        min-height: 70vh;
+        background-image: linear-gradient(to right, rgba(34, 0, 45, 0.9) 40%, rgba(0,0,0,0.4) 80%), 
+                          url("{% static 'img/buss.jpg' %}");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding: 10px 8%;
+        flex-direction: column;
+    }
+</style>
 
-<h1>Benjamin is the best programmer in the world!!!</h1>
+
+
+  <!-- Start of Banner Section -->
+  <div class="banner-container padding">
+    <!-- Start of Banner Text -->
+    <div class="banner-text">
+      <h1>
+        Digital Tools and Services <br />
+        to Help Your Business Grow
+      </h1>
+      <p>
+        Maxibern provides leading Software Solutions, Website Development,
+        Digital Marketing, Corporate Branding, Training, and Consultation
+        services to help businesses grow and expand.
+      </p>
+      <div class="work-with">
+        <a href="">Work with us</a>
+      </div>
+    </div>
+    <!-- End of Banner Text -->
+
+    <!-- Start of Banner Image -->
+    <div class="banner-img">
+        <img src="{% static 'img/home-3-689x469.png' %}" alt="Slide" />     
+
+
+    </div>
+    <!-- End of Banner Image -->
+  </div>
+  <!-- End of Banner Section -->
+
+
+  <!-- Start of About Us Section -->
+  <div class="about-us element padding">
+    <p>
+      Best Web Design Company in Ghana | Web Development | eCommerce | SEO
+    </p>
+    <h2>
+      World-class Web Design & <br />
+      <span>Digital Marketing Company</span>
+    </h2>
+    <p>
+      As a top-rated Ghana web design company and the best among any top ten
+      list of web development companies in Ghana, Our team continues to assist
+      companies boost their businesses online by providing customized website
+      design and digital marketing services tailored to meet client objectives
+      effectively and increase revenue.
+    </p>
+  </div>
+  <!-- End of About Us Section -->
+
+
+  <!-- Start of Our Services Section -->
+  <div class="our-service-container element padding">
+    <div class="heading">
+      <h2>Our Service</h2>
+    </div>
+    <div class="service-container">
+      <!-- Start of Service Item -->
+      <div class="service element">
+        <div class="s-col s-text">
+          <i class="fa-solid fa-computer"></i>
+          <h3>Web Development</h3>
+          <p>
+            Establish your business with a new website designed by the best
+            web design & development firm in Ghana.
+          </p>
+        </div>
+      </div>
+      <!-- End of Service Item -->
+      
+      <!-- Start of Service Item -->
+      <div class="service element padding">
+        <div class="s-col s-text">
+          <i class="fa-solid fa-computer"></i>
+          <h3>Web Development</h3>
+          <p>
+            Establish your business with a new website designed by the best
+            web design & development firm in Ghana.
+          </p>
+        </div>
+      </div>
+      <!-- End of Service Item -->
+      
+      <!-- Start of Service Item -->
+      <div class="service element padding">
+        <div class="s-col s-text">
+          <i class="fa-solid fa-computer"></i>
+          <h3>Web Development</h3>
+          <p>
+            Establish your business with a new website designed by the best
+            web design & development firm in Ghana.
+          </p>
+        </div>
+      </div>
+      <!-- End of Service Item -->
+    </div>
+  </div>
+  <!-- End of Our Services Section -->
+
+
+  <!-- Start of Empower Section -->
+  <div class="empower-container element padding">
+    <h2 class="element">
+      Empower Your Business with Our Simple, <br />
+      Efficient, and Affordable Tech Solutions From Web Design to IT Support,
+      We’ve Got You Covered.
+    </h2>
+    <div class="works">
+      <a href="">Work with us</a>
+    </div>
+  </div>
+  <!-- End of Empower Section -->
+
+
+  <!-- Start of Our Work Section -->
+  <div class="our-work-main-container element padding">
+    <h2>Projects We've Worked On</h2>
+    <div class="our-work">
+      <!-- Start of Work Item -->
+      <div class="work">
+        <img src="{% static 'img/work (2).png' %}" alt="Slide" />     
+
+       
+        <h3>Online Voting Platform</h3>
+        <div class="check-project">
+          <a href="">
+            <button>Check Out the Project</button>
+          </a>
+        </div>
+      </div>
+      <!-- End of Work Item -->
+      
+      <!-- Start of Work Item -->
+      <div class="work">
+        <img src="{% static 'img/Macbook-Air-www.gbstoregh.com (1).png' %}" alt="Slide" />     
+
+        <h3>Online Voting Platform</h3>
+        <div class="check-project">
+          <a href="">
+            <button>Check Out the Project</button>
+          </a>
+        </div>
+      </div>
+      <!-- End of Work Item -->
+      
+      <!-- Start of Work Item -->
+      <div class="work">
+        <img src="{% static 'img/work3.png' %}" alt="Slide" />     
+
+       
+        <h3>Online Voting Platform</h3>
+        <div class="check-project">
+          <a href="">
+            <button>Check Out the Project</button>
+          </a>
+        </div>
+      </div>
+      <!-- End of Work Item -->
+      
+      <!-- Start of Work Item -->
+      <div class="work">
+        <img src="{% static 'img//work4.png' %}" alt="Slide" />     
+
+       
+        <h3>Online Voting Platform</h3>
+        <div class="check-project">
+          <a href="">
+            <button>Check Out the Project</button>
+          </a>
+        </div>
+      </div>
+      <!-- End of Work Item -->
+    </div>
+  </div>
+  <!-- End of Our Work Section --> 
+
+
+
+ <!-- End of Our Work Section --> 
+ <div class="wrapper-container element padding">
+    <h3>What Clients Say</h3>
+    <div class="wrapper">
+      <i id="left" class="fa-solid fa-angle-left"></i>
+      <ul class="carousel">
+        <li class="card" draggable="false">
+          <div class="img"></div>
+
+          <h2>Blanche Pearson</h2>
+          <p>
+            "Outstanding service and top-notch web design! Highly
+            recommended."
+          </p>
+        </li>
+        <li class="card" draggable="false">
+          <div class="img"><img src="images/img-2.jpg" alt="img" /></div>
+          <h2>Joenas Brauers</h2>
+          <p>
+            "Outstanding service and top-notch web design! Highly
+            recommended."
+          </p>
+        </li>
+        <li class="card" draggable="false">
+          <div class="img"><img src="images/img-3.jpg" alt="img" /></div>
+          <h2>Lariach French</h2>
+          <p>
+            "Outstanding service and top-notch web design! Highly
+            recommended."
+          </p>
+        </li>
+        <li class="card" draggable="false">
+          <div class="img"><img src="images/img-4.jpg" alt="img" /></div>
+          <h2>James Khosravi</h2>
+          <p>
+            "Outstanding service and top-notch web design! Highly
+            recommended."
+          </p>
+        </li>
+        <li class="card" draggable="false">
+          <div class="img"><img src="images/img-5.jpg" alt="img" /></div>
+          <h2>Kristina Zasiadko</h2>
+          <p>
+            "Outstanding service and top-notch web design! Highly
+            recommended."
+          </p>
+        </li>
+        <li class="card" draggable="false">
+          <div class="img"><img src="images/img-6.jpg" alt="img" /></div>
+          <h2>Donald Horton</h2>
+          <p>
+            "Outstanding service and top-notch web design! Highly
+            recommended."
+          </p>
+        </li>
+      </ul>
+      <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+  </div>
+
+
+    <!-- blog page -->
+    <div class="our-blog-container padding element">
+        <h2>Our Blog</h2>
+        <div class="blog-container">
+          <a  href="{% url 'blogDetail' %}">
+            <div class="blog ">
+            
+              <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
+  
+              <div class="writer">
+                <!-- writter image -->
+                <img src="img/image.png" alt="" />
+                <!-- writter name -->
+                <p>Benjamin Asare</p>
+              </div>
+              <div class="blog-heading">
+                <h4>
+                  The Top 7 Website Design Mistakes Killing Your Conversions
+                </h4>
+                <p>
+                  In today’s digital landscape, your website is your storefront.
+                  Just like a…
+                </p>
+              </div>
+              <div class="news">
+              <p>read more</p>
+              </div>
+            </div>
+          </a>
+          <a  href="{% url 'blogDetail' %}">
+            <div class="blog ">
+                         <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
+  
+  
+              <div class="writer">
+                <!-- writter image -->
+                <img src="img/image.png" alt="" />
+                <!-- writter name -->
+                <p>Benjamin Asare</p>
+              </div>
+              <div class="blog-heading">
+                <h4>
+                  The Top 7 Website Design Mistakes Killing Your Conversions
+                </h4>
+                <p>
+                  In today’s digital landscape, your website is your storefront.
+                  Just like a…
+                </p>
+              </div>
+              <div class="news">
+              <p>read more</p>
+              </div>
+            </div>
+          </a>
+          <a  href="{% url 'blogDetail' %}">
+            <div class="blog ">
+                         <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
+  
+  
+              <div class="writer">
+                <!-- writter image -->
+                <img src="img/image.png" alt="" />
+                <!-- writter name -->
+                <p>Benjamin Asare</p>
+              </div>
+              <div class="blog-heading">
+                <h4>
+                  The Top 7 Website Design Mistakes Killing Your Conversions
+                </h4>
+                <p>
+                  In today’s digital landscape, your website is your storefront.
+                  Just like a…
+                </p>
+              </div>
+              <div class="news">
+              <p>read more</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+  
+  
+
+
+
+
+
+    <script>
+        const menuIcon = document.querySelector(".menu-icon");
+  
+        menuIcon.addEventListener("click", () => {
+          const navLinks = document.querySelector(".nav-links");
+          navLinks.classList.toggle("show");
+        });
+  
+        function handleAnimationScroll() {
+          // This block of code handles the reveal animation for elements on scroll
+          window.addEventListener("scroll", () => {
+            const targetElements = document.querySelectorAll(".element");
+  
+            targetElements.forEach((element) => {
+              const position = element.getBoundingClientRect();
+              const threshold = window.innerHeight * 0.9;
+  
+              // If the element's position is within the threshold, reveal it and trigger animation
+              if (position.top <= threshold) {
+                element.classList.add("slides");
+              }
+            });
+          });
+        }
+        handleAnimationScroll();
+      </script>
+  
+      <script>
+        const wrapper = document.querySelector(".wrapper");
+        const carousel = document.querySelector(".carousel");
+        const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+        const arrowBtns = document.querySelectorAll(".wrapper i");
+        const carouselChildrens = [...carousel.children];
+  
+        let isDragging = false,
+          isAutoPlay = true,
+          startX,
+          startScrollLeft,
+          timeoutId;
+  
+        // Get the number of cards that can fit in the carousel at once
+        let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+  
+        // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+        carouselChildrens
+          .slice(-cardPerView)
+          .reverse()
+          .forEach((card) => {
+            carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+          });
+  
+        // Insert copies of the first few cards to end of carousel for infinite scrolling
+        carouselChildrens.slice(0, cardPerView).forEach((card) => {
+          carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+        });
+  
+        // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+  
+        // Add event listeners for the arrow buttons to scroll the carousel left and right
+        arrowBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            carousel.scrollLeft +=
+              btn.id == "left" ? -firstCardWidth : firstCardWidth;
+          });
+        });
+  
+        const dragStart = (e) => {
+          isDragging = true;
+          carousel.classList.add("dragging");
+          // Records the initial cursor and scroll position of the carousel
+          startX = e.pageX;
+          startScrollLeft = carousel.scrollLeft;
+        };
+  
+        const dragging = (e) => {
+          if (!isDragging) return; // if isDragging is false return from here
+          // Updates the scroll position of the carousel based on the cursor movement
+          carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+        };
+  
+        const dragStop = () => {
+          isDragging = false;
+          carousel.classList.remove("dragging");
+        };
+  
+        const infiniteScroll = () => {
+          // If the carousel is at the beginning, scroll to the end
+          if (carousel.scrollLeft === 0) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
+          }
+          // If the carousel is at the end, scroll to the beginning
+          else if (
+            Math.ceil(carousel.scrollLeft) ===
+            carousel.scrollWidth - carousel.offsetWidth
+          ) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
+          }
+  
+          // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+          clearTimeout(timeoutId);
+          if (!wrapper.matches(":hover")) autoPlay();
+        };
+  
+        const autoPlay = () => {
+          if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+          // Autoplay the carousel after every 2500 ms
+          timeoutId = setTimeout(
+            () => (carousel.scrollLeft += firstCardWidth),
+            2500
+          );
+        };
+        autoPlay();
+  
+        carousel.addEventListener("mousedown", dragStart);
+        carousel.addEventListener("mousemove", dragging);
+        document.addEventListener("mouseup", dragStop);
+        carousel.addEventListener("scroll", infiniteScroll);
+        wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+        wrapper.addEventListener("mouseleave", autoPlay);
+      </script>
+
 
 {% endblock %}

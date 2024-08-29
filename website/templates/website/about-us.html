@@ -1,0 +1,230 @@
+
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  .empower-container {
+      position: relative;
+      min-height: 70vh;
+      background-image: linear-gradient(to right, rgba(34, 0, 45, 0.9) 40%, rgba(0,0,0,0.4) 80%), 
+                        url("{% static 'img/buss.jpg' %}");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px 8%;
+      flex-direction: column;
+  }
+</style>
+
+
+  <!-- Start of Banner Section -->
+  <div class="banner-container">
+    <!-- Start of Banner Text -->
+    <div class="banner-text">
+      <h1>
+      
+We Are GB Technology,
+Your Trusted IT
+Partner
+      </h1>
+      <p>
+        GB Technology provides leading Software Solutions, Website Development,
+        Digital Marketing, Corporate Branding, Training, and Consultation
+        services to help businesses grow and expand.
+      </p>
+      <div class="work-with">
+        <a href="">Work with us</a>
+      </div>
+    </div>
+    <!-- End of Banner Text -->
+
+    <!-- Start of Banner Image -->
+    <div class="banner-img">
+      <img src="{% static 'img/home-3-689x469.png' %}" alt="Slide" />   
+
+    </div>
+    <!-- End of Banner Image -->
+  </div>
+  <!-- End of Banner Section -->
+
+
+<!-- Start of About Us Section -->
+<div class="about-us element">
+  <p>
+    Best Web Design Company in Ghana | Web Development | eCommerce | SEO
+  </p>
+  <h2>
+    World-class Web Design & <br />
+    <span>Digital Marketing Company</span>
+  </h2>
+  <p>
+    As a top-rated Ghana web design company and the best among any top ten
+    list of web development companies in Ghana, Our team continues to assist
+    companies boost their businesses online by providing customized website
+    design and digital marketing services tailored to meet client objectives
+    effectively and increase revenue.
+  </p>
+</div>
+<!-- End of About Us Section -->
+
+
+
+<div class="about-us-main element">
+  <div class="about-us-page-text">
+    <h2>Who We Are
+    </h2>
+
+    <div class="about-col">
+      <h4>Our Mission</h4>
+      <p>Our vision is to empower enterprises worldwide, fostering innovation, inclusivity, and a digital landscape where small businesses stand tall alongside industry giants, achieving unparalleled success in the ever-evolving realm of technology.
+
+      </p>
+    </div>
+    <div class="about-col">
+      <h4>Our Mission</h4>
+      <p>Our vision is to empower enterprises worldwide, fostering innovation, inclusivity, and a digital landscape where small businesses stand tall alongside industry giants, achieving unparalleled success in the ever-evolving realm of technology.
+
+      </p>
+    </div>
+    <div class="about-col">
+      <h4>Our Mission</h4>
+      <p>Our vision is to empower enterprises worldwide, fostering innovation, inclusivity, and a digital landscape where small businesses stand tall alongside industry giants, achieving unparalleled success in the ever-evolving realm of technology.
+
+      </p>
+    </div>
+  </div>
+
+  <div class="about-us-page-img">
+ 
+    <img src="{% static 'img/Asset-2-800x501.png' %}" alt="Slide" />   
+
+  </div>
+</div>
+
+
+
+<!-- why choose us -->
+<div class="why-choose-us-container element">
+  <h2>Why Choose GB Technology?
+  </h2>
+  <p>Choose GB Technology because we make your business shine online with smart <br> solutions and friendly expertise, helping you grow and stand out in the digital world.
+
+  </p>
+
+  <div class="why-choose">
+     <div class="why element">
+      <i class="fa-solid fa-gear"></i>
+      <h4> Innovative Solutions
+      </h4>
+
+      <p> Unleash the power of innovation and creativity with our forward-thinking solutions tailored for the success of your business.
+
+      </p>
+     </div>
+     <div class="why element">
+      <i class="fa-solid fa-clock"></i>
+      <h4> Timely Deliveries
+
+      </h4>
+
+<p>Rely on the commitment of GB Technology to punctuality, ensuring your projects are delivered on time, every time.
+
+</p>
+      </p>
+     </div>
+
+     <div class="why element">
+      <i class="fa-solid fa-thumbs-up"></i>
+      <h4> 100% Satisfaction
+
+      </h4>
+
+     <p> Customer satisfaction is our main focus. We work diligently to ensure our clients get value for what they have paid for.
+
+     </p>
+     </div>
+
+     <div class="why element">
+      <i class="fa-solid fa-money-bill-trend-up"></i>
+      <h4> Affordable Prices
+
+      </h4>
+
+    <p> We offer a very competitive and affordable rates to our customers whilst delivering quality.
+
+    </p>
+     </div>
+
+     <div class="why element">
+      <i class="fa-solid fa-user-group"></i>
+      <h4>We Are Friendly & Simple
+
+      </h4>
+
+     <p> Our clients feel loved working with us. We ensure the process becomes friendly & pleasant.
+
+     </p>
+     </div>
+     <div class="why element">
+      <i class="fa-solid fa-phone"></i>      <h4>24/7 Excellent Support
+
+      </h4>
+
+      <p>Our well trained and experienced technical & customer support unit are available 24/7 .
+
+      </p>
+     </div>
+
+  </div>
+</div>
+
+
+
+  <!-- Start of Empower Section -->
+  <div class="empower-container element">
+    <h2 class="element">
+      Empower Your Business with Our Simple, <br />
+      Efficient, and Affordable Tech Solutions From Web Design to IT Support,
+      We’ve Got You Covered.
+    </h2>
+    <div class="works">
+      <a href="">Work with us</a>
+    </div>
+  </div>
+  <!-- End of Empower Section -->
+
+
+
+
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+
+      menuIcon.addEventListener("click", () => {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show");
+      });
+
+      function handleAnimationScroll() {
+        // This block of code handles the reveal animation for elements on scroll
+        window.addEventListener("scroll", () => {
+          const targetElements = document.querySelectorAll(".element");
+
+          targetElements.forEach((element) => {
+            const position = element.getBoundingClientRect();
+            const threshold = window.innerHeight * 0.9;
+
+            // If the element's position is within the threshold, reveal it and trigger animation
+            if (position.top <= threshold) {
+              element.classList.add("slides");
+            }
+          });
+        });
+      }
+      handleAnimationScroll();
+    </script>
+  
+{% endblock %}

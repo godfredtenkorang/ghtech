@@ -4,10 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'website/style.css' %}">
     <title>GB Tech</title>
+
+    <!-- font awesome -->
+    <link
+    href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css
+    rel=stylesheet> <link
+    href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css
+    rel=stylesheet> <link rel=stylesheet href=css/style.css>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5637840120106275"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- External CSS files, meta tags, and other head elements can go here -->
+    <link rel="stylesheet" href="{% static 'foundation/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
-    {% block content %}{% endblock %}
+ <!-- Start of Header -->
+ <header>
+    <!-- Start of First Header -->
+    <div class="first-header">
+      <!-- Start of First Column -->
+      <div class="first-col">
+        <p>0558156844</p>
+        <p>0558156844</p>
+        <p>0558156844</p>
+      </div>
+      <!-- End of First Column -->
+
+      <!-- Start of Social Media Section -->
+      <div class="social-media">
+        
+       
+          <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-x"></i></a></li>
+        
+      </div>
+      <!-- End of Social Media Section -->
+    </div>
+    <!-- End of First Header -->
+
+    <!-- Start of Navigation -->
+    <nav>
+      <!-- Start of Logo Section -->
+      <div class="logo">
+        <a  href="{% url 'index' %}">GB Technology</a>
+      </div>
+      <!-- End of Logo Section -->
+
+      <!-- Start of Navigation Links -->
+      <div class="nav-link">
+        <ul class="nav-links">
+          <li><a  href="{% url 'index' %}">Home</a></li>
+          <li><a  href="{% url 'ourWork' %}">Our Work</a></li>
+          <li><a href="{% url 'service' %}">Service</a></li>
+          <li><a  href="{% url 'aboutUs' %}">About Us</a></li>
+          <li><a  href="{% url ' contact' %}">Contact</a></li>
+          <li><a  href="{% url 'blog' %}">Blog</a></li>
+        </ul>
+        <li class="work-with-us"><a href="">Work With Us</a></li>
+
+        <!-- Start of Menu Icon -->
+        <div class="menu-icon">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <!-- End of Menu Icon -->
+      </div>
+      <!-- End of Navigation Links -->
+    </nav>
+    <!-- End of Navigation -->
+  </header>
+  <!-- End of Header -->
+ 
+
+
+ {% block content %}{% endblock %}
+
+
+
+
+
+
+
+ <footer >
+    <div class="footer">
+      <div class="footer-col">
+        <h5>About Us</h5>
+        <li><a href="">Who we are</a></li>
+        <li><a href="">Who we are</a></li>
+        <li><a href="">Who we are</a></li>
+        <li><a href="">Who we are</a></li>
+      </div>
+      <div class="footer-col">
+        <h5>About Us</h5>
+        <li><a href="">Who we are</a></li>
+        <li><a href="">Who we are</a></li>
+        <li><a href="">Who we are</a></li>
+        <li><a href="">Who we are</a></li>
+      </div>
+      <div class="footer-col">
+        <h5>About Us</h5>
+        <li><a href="">Who we are</a></li>
+        <li><a href="">Who we are</a></li>
+        <li><a href="">Who we are</a></li>
+        <li><a href="">Who we are</a></li>
+      </div>
+
+      <div class="news-letter footer-col">
+        <h5>News Letter</h5>
+        <form action="">
+          <input type="text" placeholder="Email" />
+          <button>Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="copy-right">
+      <p>© 2018 Orcons Systems . All Rights Reserved.</p>
+      <div class="social-media">
+        <p>follow us on</p>
+
+        <li>
+          <a href=""><i class="fa-brands fa-facebook"></i> </a>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-tiktok"></i> </a>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-x"></i> </a>
+        </li>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

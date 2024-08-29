@@ -1,0 +1,98 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  
+
+
+    <div class="blog-detail-page">
+        <div class="blog-img">
+          
+            <img src="{% static 'img/banner.jpg' %}" alt="Slide" />   
+
+        </div>
+        <div class="blog-detail">
+            <p>
+                At [Your Company Name], we are more than just a web development
+                agency—we a
+               
+               
+               re your digital partners in innovation and growth. With a
+                passion for technology and a commitment to excellence, we specialize
+                in creating bespoke digital solutions that transform ideas into
+                reality. <br />
+                <br />
+      
+                Our journey began with a simple mission: to empower businesses by
+                providing cutting-edge web solutions that drive success in the digital
+                world. Today, we are proud to have a team of creative minds and
+                technical experts who are dedicated to pushing the boundaries of
+                what's possible. <br />
+                <br />
+      
+                From startups to established enterprises, we collaborate closely with
+                our clients to understand their unique needs and goals. Whether it’s
+                designing a stunning website, developing a powerful e-commerce
+                platform, or creating a seamless user experience, we approach every
+                project with the same level of dedication and attention to detail.
+                <br />
+                <br />
+      
+                Innovation is at the heart of what we do. We stay ahead of the curve
+                by embracing the latest technologies and trends, ensuring that our
+                clients not only meet the demands of today but are also prepared for
+                the challenges of tomorrow. Our solutions are not just about
+                aesthetics; they are about delivering real results—driving engagement,
+                increasing conversions, and boosting your online presence. <br />
+                <br />
+      
+                At [Your Company Name], we believe that success in the digital age
+                requires more than just a website—it requires a partner who
+                understands your vision and is committed to helping you achieve it.
+                Let’s build the future together.
+              </p>
+        </div>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+
+      menuIcon.addEventListener("click", () => {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show");
+      });
+
+      function handleAnimationScroll() {
+        // This block of code handles the reveal animation for elements on scroll
+        window.addEventListener("scroll", () => {
+          const targetElements = document.querySelectorAll(".element");
+
+          targetElements.forEach((element) => {
+            const position = element.getBoundingClientRect();
+            const threshold = window.innerHeight * 0.9;
+
+            // If the element's position is within the threshold, reveal it and trigger animation
+            if (position.top <= threshold) {
+              element.classList.add("slides");
+            }
+          });
+        });
+      }
+      handleAnimationScroll();
+    </script>
+{% endblock %}

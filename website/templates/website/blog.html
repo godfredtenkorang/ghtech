@@ -1,0 +1,158 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+ 
+
+ <!-- Start of Banner Section -->
+ <div class="banner-container page">
+  <!-- Start of Banner Text -->
+  <div class="banner-text">
+    <h1>
+      Web Development Services <br> That Drives Leads & Sales
+
+    </h1>
+    <p>
+      We design high-performing websites for brands looking to grow. Strategy, design, development, and marketing – you get everything you need to grow.
+
+
+    </p>
+    <div class="work-with">
+      <a href="">Work with us</a>
+    </div>
+  </div>
+  <!-- End of Banner Text -->
+
+  <!-- Start of Banner Image -->
+  <div class="banner-img">
+    
+    <img src="{% static 'img/blog.jpg' %}" alt="Slide" />     
+
+  </div>
+  <!-- End of Banner Image -->
+</div>
+<!-- End of Banner Section -->
+
+
+  
+
+
+    <!-- blog page -->
+    <div class="our-blog-container padding">
+      <h2>Our Blog</h2>
+      <div class="blog-container">
+        <a  href="{% url 'blogDetail' %}">
+          <div class="blog ">
+          
+            <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
+
+            <div class="writer">
+              <!-- writter image -->
+              <img src="img/image.png" alt="" />
+              <!-- writter name -->
+              <p>Benjamin Asare</p>
+            </div>
+            <div class="blog-heading">
+              <h4>
+                The Top 7 Website Design Mistakes Killing Your Conversions
+              </h4>
+              <p>
+                In today’s digital landscape, your website is your storefront.
+                Just like a…
+              </p>
+            </div>
+            <div class="news">
+            <p>read more</p>
+            </div>
+          </div>
+        </a>
+        <a  href="{% url 'blogDetail' %}">
+          <div class="blog ">
+                       <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
+
+
+            <div class="writer">
+              <!-- writter image -->
+              <img src="img/image.png" alt="" />
+              <!-- writter name -->
+              <p>Benjamin Asare</p>
+            </div>
+            <div class="blog-heading">
+              <h4>
+                The Top 7 Website Design Mistakes Killing Your Conversions
+              </h4>
+              <p>
+                In today’s digital landscape, your website is your storefront.
+                Just like a…
+              </p>
+            </div>
+            <div class="news">
+            <p>read more</p>
+            </div>
+          </div>
+        </a>
+        <a  href="{% url 'blogDetail' %}">
+          <div class="blog ">
+                       <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
+
+
+            <div class="writer">
+              <!-- writter image -->
+              <img src="img/image.png" alt="" />
+              <!-- writter name -->
+              <p>Benjamin Asare</p>
+            </div>
+            <div class="blog-heading">
+              <h4>
+                The Top 7 Website Design Mistakes Killing Your Conversions
+              </h4>
+              <p>
+                In today’s digital landscape, your website is your storefront.
+                Just like a…
+              </p>
+            </div>
+            <div class="news">
+            <p>read more</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+
+      menuIcon.addEventListener("click", () => {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show");
+      });
+
+      function handleAnimationScroll() {
+        // This block of code handles the reveal animation for elemenss on scroll
+        window.addEventListener("scroll", () => {
+          const targets = document.querySelectorAll(".");
+
+          targets.forEach(() => {
+            const position = elemens.getBoundingClientRect();
+            const threshold = window.innerHeight * 0.9;
+
+            // If the elemens's position is within the threshold, reveal it and trigger animation
+            if (position.top <= threshold) {
+              elemens.classList.add("slides");
+            }
+          });
+        });
+      }
+      handleAnimationScroll();
+    </script>
+ {% endblock %}
