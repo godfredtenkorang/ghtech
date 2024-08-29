@@ -1,0 +1,110 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<style>
+
+
+.we-love-what-we-do{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0,0,0, 0.9)),   url("{% static 'img/banner.jpg' %}");
+  position: relative;
+  min-height: 40vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  align-items: center;
+ 
+ 
+  padding: 4% 8%;
+  display: flex;
+
+
+ 
+  color: var(--white);
+}
+
+@media (max-width:750px){
+  .we-love-what-we-do{
+    flex-direction: column;
+  }
+}
+
+</style>
+
+
+
+    <div class="we-love-what-we-do ">
+        <div class="what-we-do">
+         <p>We love what we do
+         </p>
+       <h1>Websites & Design Works book us
+        </div>
+       </h1>
+       <div class="what-we-do-form">
+         <form action="">
+           <div class="input">
+             <label for="">Name</label> <br>
+             <input type="text" name="" id="">
+           </div>
+           <div class="input">
+             <label for="">Email</label> <br>
+             <input type="text" name="" id="">
+           </div>
+           <div class="input">
+             <label for="">Phone Number</label> <br>
+             <input type="text" name="" id="">
+           </div>
+           <div class="input">
+             <label for="">What do you want us to help you with</label> <br>
+            <textarea name="" id="" placeholder="What do you want us to help you with"></textarea>
+           </div>
+           <div class="input">
+       
+       <button>Send</button>    
+       </div>
+         </form>
+       </div>
+        </div> 
+       
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+
+      menuIcon.addEventListener("click", () => {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show");
+      });
+
+      function handleAnimationScroll() {
+        // This block of code handles the reveal animation for elements on scroll
+        window.addEventListener("scroll", () => {
+          const targetElements = document.querySelectorAll(".element");
+
+          targetElements.forEach((element) => {
+            const position = element.getBoundingClientRect();
+            const threshold = window.innerHeight * 0.9;
+
+            // If the element's position is within the threshold, reveal it and trigger animation
+            if (position.top <= threshold) {
+              element.classList.add("slides");
+            }
+          });
+        });
+      }
+      handleAnimationScroll();
+    </script>
+  {% endblock %}

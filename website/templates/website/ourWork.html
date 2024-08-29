@@ -1,0 +1,135 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+    
+
+
+
+
+  
+  <!-- Start of Banner Section -->
+  <div class="banner-container page">
+    <!-- Start of Banner Text -->
+    <div class="banner-text">
+      <h1>
+        Check out
+        our most recent
+        Projects.
+      </h1>
+      <p>
+        Maxibern provides leading Software Solutions, Website Development,
+        Digital Marketing, Corporate Branding, Training, and Consultation
+        services to help businesses grow and expand.
+      </p>
+      <div class="work-with">
+        <a href="">Work with us</a>
+      </div>
+    </div>
+    <!-- End of Banner Text -->
+
+    <!-- Start of Banner Image -->
+    <div class="banner-img">
+      
+      <img src="{% static 'img/Asset-2-800x501.png' %}" alt="Slide" />     
+
+    </div>
+    <!-- End of Banner Image -->
+  </div>
+  <!-- End of Banner Section -->
+
+
+
+  <!-- Start of Our Work Section -->
+  <div class="our-work-main-container element padding">
+    <h2>Projects We've Worked On</h2>
+    <div class="our-work">
+      <!-- Start of Work Item -->
+      <div class="work">
+        <img src="{% static 'img/work (2).png' %}" alt="Slide" />     
+
+       
+        <h3>Online Voting Platform</h3>
+        <div class="check-project">
+          <a href="">
+            <button>Check Out the Project</button>
+          </a>
+        </div>
+      </div>
+      <!-- End of Work Item -->
+      
+      <!-- Start of Work Item -->
+      <div class="work">
+        <img src="{% static 'img/Macbook-Air-www.gbstoregh.com (1).png' %}" alt="Slide" />     
+
+        <h3>Online Voting Platform</h3>
+        <div class="check-project">
+          <a href="">
+            <button>Check Out the Project</button>
+          </a>
+        </div>
+      </div>
+      <!-- End of Work Item -->
+      
+      <!-- Start of Work Item -->
+      <div class="work">
+        <img src="{% static 'img/work3.png' %}" alt="Slide" />     
+
+       
+        <h3>Online Voting Platform</h3>
+        <div class="check-project">
+          <a href="">
+            <button>Check Out the Project</button>
+          </a>
+        </div>
+      </div>
+      <!-- End of Work Item -->
+      
+      <!-- Start of Work Item -->
+      <div class="work">
+        <img src="{% static 'img//work4.png' %}" alt="Slide" />     
+
+       
+        <h3>Online Voting Platform</h3>
+        <div class="check-project">
+          <a href="">
+            <button>Check Out the Project</button>
+          </a>
+        </div>
+      </div>
+      <!-- End of Work Item -->
+    </div>
+  </div>
+  <!-- End of Our Work Section --> 
+
+
+
+
+
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+
+      menuIcon.addEventListener("click", () => {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show");
+      });
+
+      function handleAnimationScroll() {
+        // This block of code handles the reveal animation for elements on scroll
+        window.addEventListener("scroll", () => {
+          const targetElements = document.querySelectorAll(".element");
+
+          targetElements.forEach((element) => {
+            const position = element.getBoundingClientRect();
+            const threshold = window.innerHeight * 0.9;
+
+            // If the element's position is within the threshold, reveal it and trigger animation
+            if (position.top <= threshold) {
+              element.classList.add("slides");
+            }
+          });
+        });
+      }
+      handleAnimationScroll();
+    </script>
+ {% endblock %}
