@@ -44,80 +44,65 @@
 
 <!-- why choose us -->
 <div class="why-choose-us-container element">
-  <h2>Why Choose Maxibern?
-  </h2>
-  <p>Choose Maxibern because we make your business shine online with smart <br> solutions and friendly expertise, helping you grow and stand out in the digital world.
-
-  </p>
+  <h2>Why Choose GBTechnology</h2>
+  <p>Partner with GBTechnology to elevate your business online. <br> We offer innovative solutions and expert guidance, ensuring your  <br> brand thrives and distinguishes itself in the digital landscape.</p>
+  
 
   
 </div>
 
 
-
-<div class="service-col-container element ">
+<div class="service-col-container element">
   <div class="service-col">
-    <h3> Get Real Experts to Launch Your Site</h3>
-      <p>We have over six years of working experience in developing <br> responsive websites across various industries. We strive to meet your specific needs and exceed your expectations.</p>
-       <br>  
-
-     <p>   Over the years, we have developed a streamlined process <br> to work with our clients like you. That means you can rest assured that you’ll have a hassle-free experience with us. </p>
+    <img src="{% static 'img/web.png' %}" alt="Web Development" />
+  </div>
+  <div class="service-col">
+    <h3>Expert Web Development</h3>
+    <p>We craft responsive, user-friendly websites tailored to your business needs. Our web development services ensure your online presence is both functional and visually appealing.</p>
+    <br>
+    <p>From concept to launch, we focus on creating websites that engage users and drive results, making your digital presence stand out.</p>
+  </div>
  
-  </div>
-  <div class="service-col">
-   <img src="{% static 'img/Asset-2-800x501.png' %}" alt="Slide" />   
-  </div>
 </div>
+
+
 
 <div class="service-col-container element second">
-
   <div class="service-col">
-    <img src="{% static 'img/Website-Design-Banner-800x567.png' %}" alt="Slide" />   
-
-   </div>
-  <div class="service-col">
-    <h3> Get Real Experts to Launch Your Site</h3>
-      <p>We have over six years of working experience in developing <br> responsive websites across various industries. We strive to meet your specific needs and exceed your expectations.</p>
-       <br>  
-
-     <p>   Over the years, we have developed a streamlined process <br> to work with our clients like you. That means you can rest assured that you’ll have a hassle-free experience with us. </p>
- 
+    <h3>Comprehensive Digital Marketing</h3>
+    <p>Our digital marketing strategies are designed to enhance your online visibility, engage your audience, and drive conversions. We tailor our approach to meet your specific goals.</p>
+    <br>
+    <p>By leveraging the latest tools and techniques, we ensure your brand reaches its full potential in the digital landscape.</p>
   </div>
- 
+  <div class="service-col">
+    <img src="{% static 'img/social.png' %}" alt="Digital Marketing" />
+  </div>
 </div>
+
 
 <div class="service-col-container element">
   <div class="service-col">
-    <h3> Get Real Experts to Launch Your Site</h3>
-      <p>We have over six years of working experience in developing <br> responsive websites across various industries. We strive to meet your specific needs and exceed your expectations.</p>
-       <br>  
-
-     <p>   Over the years, we have developed a streamlined process <br> to work with our clients like you. That means you can rest assured that you’ll have a hassle-free experience with us. </p>
- 
+    <img src="{% static 'img/graphic.jpg' %}" alt="Graphic Design" />
   </div>
   <div class="service-col">
-   <img src="{% static 'img/Website-Design-Banner-800x567.png' %}" alt="Slide" />   
-
+    <h3>Creative Graphic Design</h3>
+    <p>Our graphic design services bring your brand to life with visually compelling designs that resonate with your audience. From logos to complete branding, we deliver impactful designs.</p>
+    <br>
+    <p>We collaborate closely with you to ensure the final designs align perfectly with your brand’s vision and goals.</p>
   </div>
+ 
 </div>
-
 <div class="service-col-container element">
   <div class="service-col">
-    
-    <img src="{% static 'img/SEO.jpg' %}" alt="Slide" />   
-
-   </div>
-  <div class="service-col">
-    <h3> Get Real Experts to Launch Your Site</h3>
-      <p>We have over six years of working experience in developing <br> responsive websites across various industries. We strive to meet your specific needs and exceed your expectations.</p>
-       <br>  
-
-     <p>   Over the years, we have developed a streamlined process <br> to work with our clients like you. That means you can rest assured that you’ll have a hassle-free experience with us. </p>
- 
+    <h3>Effective SEO Services</h3>
+    <p>Our SEO services optimize your website to improve search engine rankings and increase organic traffic. We focus on making your site easily discoverable by your target audience.</p>
+    <br>
+    <p>By implementing a structured SEO approach, we help your website achieve higher visibility and better performance online.</p>
   </div>
-  
+  <div class="service-col">
+    <img src="{% static 'img/Asset-2-800x501.png' %}" alt="SEO" />
+  </div>
 </div>
-
 
 
 
@@ -137,12 +122,7 @@
 
 
     <script>
-      const menuIcon = document.querySelector(".menu-icon");
-
-      menuIcon.addEventListener("click", () => {
-        const navLinks = document.querySelector(".nav-links");
-        navLinks.classList.toggle("show");
-      });
+   
 
       function handleAnimationScroll() {
         // This block of code handles the reveal animation for elements on scroll

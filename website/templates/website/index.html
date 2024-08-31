@@ -26,15 +26,10 @@
   <div class="banner-container padding">
     <!-- Start of Banner Text -->
     <div class="banner-text">
-      <h1>
-        Digital Tools and Services <br />
-        to Help Your Business Grow
-      </h1>
-      <p>
-        Maxibern provides leading Software Solutions, Website Development,
-        Digital Marketing, Corporate Branding, Training, and Consultation
-        services to help businesses grow and expand.
-      </p>
+        <h1>Your Trusted Partner for Web Development & IT Solutions</h1>
+
+        <p>We specialize in creating cutting-edge websites and providing comprehensive IT solutions tailored to meet your business needs. Whether you're looking to enhance your online presence or streamline your IT infrastructure, our team is dedicated to delivering innovative, reliable, and scalable solutions.</p>
+
       <div class="work-with">
         <a href="">Work with us</a>
       </div>
@@ -62,11 +57,7 @@
       <span>Digital Marketing Company</span>
     </h2>
     <p>
-      As a top-rated Ghana web design company and the best among any top ten
-      list of web development companies in Ghana, Our team continues to assist
-      companies boost their businesses online by providing customized website
-      design and digital marketing services tailored to meet client objectives
-      effectively and increase revenue.
+        As a leading web design company in Ghana, recognized among the top ten web development firms <br> in the country, our team consistently helps businesses enhance their online presence. <br> We deliver tailored website design and digital marketing services <br> that align with client goals, driving effective results and boosting revenue.
     </p>
   </div>
   <!-- End of About Us Section -->
@@ -83,38 +74,38 @@
         <div class="s-col s-text">
           <i class="fa-solid fa-computer"></i>
           <h3>Web Development</h3>
-          <p>
-            Establish your business with a new website designed by the best
-            web design & development firm in Ghana.
-          </p>
+          <p>We specialize in delivering top-notch web development services that bring your vision to life. Our team builds robust, scalable, and user-friendly websites tailored to meet your specific business needs, ensuring a seamless online experience for your customers.</p>
+
         </div>
       </div>
       <!-- End of Service Item -->
       
-      <!-- Start of Service Item -->
-      <div class="service element padding">
-        <div class="s-col s-text">
-          <i class="fa-solid fa-computer"></i>
-          <h3>Web Development</h3>
-          <p>
-            Establish your business with a new website designed by the best
-            web design & development firm in Ghana.
-          </p>
-        </div>
-      </div>
+     <!-- Start of Service Item -->
+<div class="service element padding">
+    <div class="s-col s-text">
+      <i class="fa-solid fa-bullhorn"></i>
+      <h3>Digital Marketing</h3>
+      <p>
+        Boost your online presence with targeted digital marketing strategies designed to drive engagement and grow your business.
+      </p>
+    </div>
+  </div>
+  <!-- End of Service Item -->
+  
       <!-- End of Service Item -->
       
-      <!-- Start of Service Item -->
-      <div class="service element padding">
-        <div class="s-col s-text">
-          <i class="fa-solid fa-computer"></i>
-          <h3>Web Development</h3>
-          <p>
-            Establish your business with a new website designed by the best
-            web design & development firm in Ghana.
-          </p>
-        </div>
-      </div>
+    <!-- Start of Service Item -->
+<div class="service element padding">
+    <div class="s-col s-text">
+      <i class="fa-solid fa-palette"></i>
+      <h3>Graphic Design</h3>
+      <p>
+        Bring your brand to life with creative graphic design services that capture your vision and make a lasting impression.
+      </p>
+    </div>
+  </div>
+  <!-- End of Service Item -->
+  
       <!-- End of Service Item -->
     </div>
   </div>
@@ -157,7 +148,7 @@
       <div class="work">
         <img src="{% static 'img/Macbook-Air-www.gbstoregh.com (1).png' %}" alt="Slide" />     
 
-        <h3>Online Voting Platform</h3>
+        <h3>E-ecommerce Website</h3>
         <div class="check-project">
           <a href="">
             <button>Check Out the Project</button>
@@ -171,7 +162,8 @@
         <img src="{% static 'img/work3.png' %}" alt="Slide" />     
 
        
-        <h3>Online Voting Platform</h3>
+        <h3>Hope In Messiah
+            Needy Foundation</h3>
         <div class="check-project">
           <a href="">
             <button>Check Out the Project</button>
@@ -185,7 +177,7 @@
         <img src="{% static 'img//work4.png' %}" alt="Slide" />     
 
        
-        <h3>Online Voting Platform</h3>
+        <h3>Website for Nakiv Fashion School</h3>
         <div class="check-project">
           <a href="">
             <button>Check Out the Project</button>
@@ -345,137 +337,6 @@
   
   
 
-
-
-
-
-    <script>
-        const menuIcon = document.querySelector(".menu-icon");
-  
-        menuIcon.addEventListener("click", () => {
-          const navLinks = document.querySelector(".nav-links");
-          navLinks.classList.toggle("show");
-        });
-  
-        function handleAnimationScroll() {
-          // This block of code handles the reveal animation for elements on scroll
-          window.addEventListener("scroll", () => {
-            const targetElements = document.querySelectorAll(".element");
-  
-            targetElements.forEach((element) => {
-              const position = element.getBoundingClientRect();
-              const threshold = window.innerHeight * 0.9;
-  
-              // If the element's position is within the threshold, reveal it and trigger animation
-              if (position.top <= threshold) {
-                element.classList.add("slides");
-              }
-            });
-          });
-        }
-        handleAnimationScroll();
-      </script>
-  
-      <script>
-        const wrapper = document.querySelector(".wrapper");
-        const carousel = document.querySelector(".carousel");
-        const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-        const arrowBtns = document.querySelectorAll(".wrapper i");
-        const carouselChildrens = [...carousel.children];
-  
-        let isDragging = false,
-          isAutoPlay = true,
-          startX,
-          startScrollLeft,
-          timeoutId;
-  
-        // Get the number of cards that can fit in the carousel at once
-        let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-  
-        // Insert copies of the last few cards to beginning of carousel for infinite scrolling
-        carouselChildrens
-          .slice(-cardPerView)
-          .reverse()
-          .forEach((card) => {
-            carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-          });
-  
-        // Insert copies of the first few cards to end of carousel for infinite scrolling
-        carouselChildrens.slice(0, cardPerView).forEach((card) => {
-          carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-        });
-  
-        // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
-  
-        // Add event listeners for the arrow buttons to scroll the carousel left and right
-        arrowBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            carousel.scrollLeft +=
-              btn.id == "left" ? -firstCardWidth : firstCardWidth;
-          });
-        });
-  
-        const dragStart = (e) => {
-          isDragging = true;
-          carousel.classList.add("dragging");
-          // Records the initial cursor and scroll position of the carousel
-          startX = e.pageX;
-          startScrollLeft = carousel.scrollLeft;
-        };
-  
-        const dragging = (e) => {
-          if (!isDragging) return; // if isDragging is false return from here
-          // Updates the scroll position of the carousel based on the cursor movement
-          carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-        };
-  
-        const dragStop = () => {
-          isDragging = false;
-          carousel.classList.remove("dragging");
-        };
-  
-        const infiniteScroll = () => {
-          // If the carousel is at the beginning, scroll to the end
-          if (carousel.scrollLeft === 0) {
-            carousel.classList.add("no-transition");
-            carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
-            carousel.classList.remove("no-transition");
-          }
-          // If the carousel is at the end, scroll to the beginning
-          else if (
-            Math.ceil(carousel.scrollLeft) ===
-            carousel.scrollWidth - carousel.offsetWidth
-          ) {
-            carousel.classList.add("no-transition");
-            carousel.scrollLeft = carousel.offsetWidth;
-            carousel.classList.remove("no-transition");
-          }
-  
-          // Clear existing timeout & start autoplay if mouse is not hovering over carousel
-          clearTimeout(timeoutId);
-          if (!wrapper.matches(":hover")) autoPlay();
-        };
-  
-        const autoPlay = () => {
-          if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
-          // Autoplay the carousel after every 2500 ms
-          timeoutId = setTimeout(
-            () => (carousel.scrollLeft += firstCardWidth),
-            2500
-          );
-        };
-        autoPlay();
-  
-        carousel.addEventListener("mousedown", dragStart);
-        carousel.addEventListener("mousemove", dragging);
-        document.addEventListener("mouseup", dragStop);
-        carousel.addEventListener("scroll", infiniteScroll);
-        wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-        wrapper.addEventListener("mouseleave", autoPlay);
-      </script>
 
 
 {% endblock %}

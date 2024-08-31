@@ -36,9 +36,8 @@
     <div class="first-header">
       <!-- Start of First Column -->
       <div class="first-col">
-        <p>0558156844</p>
-        <p>0558156844</p>
-        <p>0558156844</p>
+        <p><i class="fa-solid fa-phone"></i> +233 55 391 2334</p>
+        <p><i class="fa-solid fa-envelope"></i> gbtechnology@gmail.com</p>
       </div>
       <!-- End of First Column -->
 
@@ -60,7 +59,7 @@
     <nav>
       <!-- Start of Logo Section -->
       <div class="logo">
-        <a  href="{% url 'index' %}">GB Technology</a>
+        <a  href="{% url 'index' %}">GBTech</a>
       </div>
       <!-- End of Logo Section -->
 
@@ -73,13 +72,20 @@
           <li><a  href="{% url 'aboutUs' %}">About Us</a></li>
           <li><a  href="{% url ' contact' %}">Contact</a></li>
           <li><a  href="{% url 'blog' %}">Blog</a></li>
+       
+        <div class="remove click">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
         </ul>
         <li class="work-with-us"><a href="">Work With Us</a></li>
-
+      
         <!-- Start of Menu Icon -->
-        <div class="menu-icon">
-          <i class="fa-solid fa-bars"></i>
+        <div class="menu-icon click">
+            <i class="fa-solid fa-bars"></i>
         </div>
+        
+
+     
         <!-- End of Menu Icon -->
       </div>
       <!-- End of Navigation Links -->
@@ -131,7 +137,7 @@
       </div>
     </div>
     <div class="copy-right">
-      <p>© 2018 Orcons Systems . All Rights Reserved.</p>
+      <p>© 2024 GBTechnology . All Rights Reserved.</p>
       <div class="social-media">
         <p>follow us on</p>
 
@@ -151,5 +157,148 @@
     </div>
   </footer>
 
+
+  <script>
+    const menuIcon = document.querySelector(".menu-icon");
+ const removeIcon = document.querySelector(".remove");
+ const navLinks = document.querySelector(".nav-links");
+ 
+ menuIcon.addEventListener("click", () => {
+     navLinks.classList.add("show");
+ });
+ 
+ removeIcon.addEventListener("click", () => {
+     navLinks.classList.remove("show");
+ });
+ 
+ 
+   
+        
+   
+         function handleAnimationScroll() {
+           // This block of code handles the reveal animation for elements on scroll
+           window.addEventListener("scroll", () => {
+             const targetElements = document.querySelectorAll(".element");
+   
+             targetElements.forEach((element) => {
+               const position = element.getBoundingClientRect();
+               const threshold = window.innerHeight * 0.9;
+   
+               // If the element's position is within the threshold, reveal it and trigger animation
+               if (position.top <= threshold) {
+                 element.classList.add("slides");
+               }
+             });
+           });
+         }
+         handleAnimationScroll();
+       </script>
+   
+
+
+   
+
+
+
+   <script>
+    const wrapper = document.querySelector(".wrapper");
+    const carousel = document.querySelector(".carousel");
+    const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+    const arrowBtns = document.querySelectorAll(".wrapper i");
+    const carouselChildrens = [...carousel.children];
+
+    let isDragging = false,
+      isAutoPlay = true,
+      startX,
+      startScrollLeft,
+      timeoutId;
+
+    // Get the number of cards that can fit in the carousel at once
+    let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+    // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+    carouselChildrens
+      .slice(-cardPerView)
+      .reverse()
+      .forEach((card) => {
+        carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+      });
+
+    // Insert copies of the first few cards to end of carousel for infinite scrolling
+    carouselChildrens.slice(0, cardPerView).forEach((card) => {
+      carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+    });
+
+    // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+
+    // Add event listeners for the arrow buttons to scroll the carousel left and right
+    arrowBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        carousel.scrollLeft +=
+          btn.id == "left" ? -firstCardWidth : firstCardWidth;
+      });
+    });
+
+    const dragStart = (e) => {
+      isDragging = true;
+      carousel.classList.add("dragging");
+      // Records the initial cursor and scroll position of the carousel
+      startX = e.pageX;
+      startScrollLeft = carousel.scrollLeft;
+    };
+
+    const dragging = (e) => {
+      if (!isDragging) return; // if isDragging is false return from here
+      // Updates the scroll position of the carousel based on the cursor movement
+      carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+    };
+
+    const dragStop = () => {
+      isDragging = false;
+      carousel.classList.remove("dragging");
+    };
+
+    const infiniteScroll = () => {
+      // If the carousel is at the beginning, scroll to the end
+      if (carousel.scrollLeft === 0) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+      }
+      // If the carousel is at the end, scroll to the beginning
+      else if (
+        Math.ceil(carousel.scrollLeft) ===
+        carousel.scrollWidth - carousel.offsetWidth
+      ) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+      }
+
+      // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+      clearTimeout(timeoutId);
+      if (!wrapper.matches(":hover")) autoPlay();
+    };
+
+    const autoPlay = () => {
+      if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+      // Autoplay the carousel after every 2500 ms
+      timeoutId = setTimeout(
+        () => (carousel.scrollLeft += firstCardWidth),
+        2500
+      );
+    };
+    autoPlay();
+
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("mousemove", dragging);
+    document.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("scroll", infiniteScroll);
+    wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+    wrapper.addEventListener("mouseleave", autoPlay);
+  </script>
 </body>
 </html>
