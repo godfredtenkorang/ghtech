@@ -10,6 +10,7 @@ body{
   background-color:#fafafa ;
 }
 
+
 /* colors */
 :root {
   --red:#ff5f2f ;
@@ -26,9 +27,11 @@ header {
 .first-header{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  min-height: 7vh;
   position: relative;
-  padding: 10px 8%;
+  padding: 1% 8%;
   background-color: #15001b;
   box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 
@@ -41,6 +44,7 @@ header {
 }
 /* nav */
 nav {
+  position: relative;
   padding: 10px 8%;
   display: flex;
   flex-direction: row;
@@ -68,7 +72,7 @@ nav a {
 /* logo */
 .logo a {
   font-size: 2rem;
-  color: #15001b;
+  color: #ff5f2f;
   font-weight: 900;
 }
 
@@ -91,6 +95,18 @@ nav a {
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
+}
+
+.remove{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+z-index: 100;
+}
+.remove i{
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
 /* slide show */
@@ -281,6 +297,7 @@ object-fit: contain;
 .service-col{
   width: 100%;
   max-width: 100%;
+ 
 }
 .service-col img{
   width: 100%;
@@ -766,12 +783,13 @@ form{
 .copy-right{
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
  
  color: var(--white);
  flex-wrap: wrap;
  background-color: #15001b; /* Deep green for the buttons */
  min-height: 3vh;
- align-items: center;
+
  padding: 1% 8%;
  border-top: solid 1px #575757;
 }
@@ -989,7 +1007,7 @@ margin: 1% 8%;
 
 /* media Queries */
 @media (max-width: 1500px) {
-  .our-blog-container, .our-work-main-container, .our-service-container, .about-us{
+  .our-blog-container,.copy-right, .our-work-main-container, .our-service-container, .about-us{
     padding: 2% 3%;
   }
 }
@@ -997,13 +1015,20 @@ margin: 1% 8%;
   .nav-links {
     position: fixed;
     display: none;
-    backdrop-filter: blur(10px);
+   background-color: #22002d;
     left: 0;
     top: 0;
     width: 100%;
+   
     padding: 5%;
     height: 100vh;
     z-index: 100;
+    animation: slidein 0.5s ease;
+  }
+  @keyframes slidein {
+    0%{
+      transform: translate(-20px);
+    }
   }
   .nav-links li {
     padding: 3% 0;
@@ -1019,7 +1044,7 @@ margin: 1% 8%;
     font-size: 3rem;
   }
 
-  .menu-icon {
+  .menu-icon, .remove {
     display: block;
   }
   .logo a {
@@ -1076,6 +1101,10 @@ margin: 1% 8%;
   .service-col-container{
     flex-direction: column;
   }
+  .service-col img{
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 @media (max-width: 750px) {
@@ -1108,13 +1137,24 @@ margin: 1% 8%;
     grid-template-columns: 1fr;
   }
 
-  .footer{
+  .footer, .copy-right{
     flex-direction: column;
   }
+
+
  
 }
 
 @media (max-width:550px){
+  nav{
+    background-color: #15001b;
+  }
+  .menu-icon i{
+    color: #fff;
+  }
+ .first-header{
+  display: none;
+ }
   .empower-container{
     align-items: center;
     gap: 1rem;
