@@ -33,32 +33,28 @@
 </div>
 <!-- End of Banner Section -->
 
-
-  
-
-
     <!-- blog page -->
     <div class="our-blog-container padding">
       <h2>Our Blog</h2>
       <div class="blog-container">
-        <a  href="{% url 'blogDetail' %}">
+        {% for blog in blogs %}
+        <a  href="{% url 'blog_detail' blog.slug %}">
           <div class="blog ">
           
-            <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
+            <img src="{{ blog.image.url }}" alt="Slide" />     
 
             <div class="writer">
               <!-- writter image -->
-              <img src="img/image.png" alt="" />
+              <img src="{{ blog.profile_image.url }}" alt="" />
               <!-- writter name -->
-              <p>Benjamin Asare</p>
+              <p>{{ blog.author }}</p>
             </div>
             <div class="blog-heading">
               <h4>
-                The Top 7 Website Design Mistakes Killing Your Conversions
+                {{ blog.title }}
               </h4>
-              <p>
-                In today’s digital landscape, your website is your storefront.
-                Just like a…
+              <p id="text-element">
+                {{ blog.article }}
               </p>
             </div>
             <div class="news">
@@ -66,66 +62,22 @@
             </div>
           </div>
         </a>
-        <a  href="{% url 'blogDetail' %}">
-          <div class="blog ">
-                       <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
-
-
-            <div class="writer">
-              <!-- writter image -->
-              <img src="img/image.png" alt="" />
-              <!-- writter name -->
-              <p>Benjamin Asare</p>
-            </div>
-            <div class="blog-heading">
-              <h4>
-                The Top 7 Website Design Mistakes Killing Your Conversions
-              </h4>
-              <p>
-                In today’s digital landscape, your website is your storefront.
-                Just like a…
-              </p>
-            </div>
-            <div class="news">
-            <p>read more</p>
-            </div>
-          </div>
-        </a>
-        <a  href="{% url 'blogDetail' %}">
-          <div class="blog ">
-                       <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
-
-
-            <div class="writer">
-              <!-- writter image -->
-              <img src="img/image.png" alt="" />
-              <!-- writter name -->
-              <p>Benjamin Asare</p>
-            </div>
-            <div class="blog-heading">
-              <h4>
-                The Top 7 Website Design Mistakes Killing Your Conversions
-              </h4>
-              <p>
-                In today’s digital landscape, your website is your storefront.
-                Just like a…
-              </p>
-            </div>
-            <div class="news">
-            <p>read more</p>
-            </div>
-          </div>
-        </a>
+        {% endfor %}
       </div>
     </div>
 
 
 
-
-
-
-
-
+<script>
+  function truncateText(selector, maxLength) {
+    const element = document.querySelector(selector);
+    const text = element.textContent;
+    if (text.length > maxLength) {
+      element.textContent = text.slice(0, maxLength) + '...';
+    }
+  }
+  truncateText('#text-element', 120); // Truncate text to 120 charactors
+</script>
 
 
 

@@ -1,342 +1,232 @@
-
-
 {% extends 'website/base.html' %}
 {% load static %}
 
 {% block content %}
 <style>
-    .empower-container {
-        position: relative;
-        min-height: 70vh;
-        background-image: linear-gradient(to right, rgba(34, 0, 45, 0.9) 40%, rgba(0,0,0,0.4) 80%), 
-                          url("{% static 'img/buss.jpg' %}");
-        background-size: cover;
-        background-position: center;
-        color: white;
-        display: flex;
-        justify-content: center;
-        padding: 10px 8%;
-        flex-direction: column;
-    }
+  .empower-container {
+    position: relative;
+    min-height: 70vh;
+    background-image: linear-gradient(to right, rgba(34, 0, 45, 0.9) 40%, rgba(0, 0, 0, 0.4) 80%),
+    url("{% static 'img/buss.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 8%;
+    flex-direction: column;
+  }
 </style>
 
 
 
-  <!-- Start of Banner Section -->
-  <div class="banner-container padding">
-    <!-- Start of Banner Text -->
-    <div class="banner-text">
-        <h1>Your Trusted Partner for Web Development & IT Solutions</h1>
+<!-- Start of Banner Section -->
+<div class="banner-container padding">
+  <!-- Start of Banner Text -->
+  <div class="banner-text">
+    <h1>Your Trusted Partner for Web Development & IT Solutions</h1>
 
-        <p>We specialize in creating cutting-edge websites and providing comprehensive IT solutions tailored to meet your business needs. Whether you're looking to enhance your online presence or streamline your IT infrastructure, our team is dedicated to delivering innovative, reliable, and scalable solutions.</p>
+    <p>We specialize in creating cutting-edge websites and providing comprehensive IT solutions tailored to meet your
+      business needs. Whether you're looking to enhance your online presence or streamline your IT infrastructure, our
+      team is dedicated to delivering innovative, reliable, and scalable solutions.</p>
 
-      <div class="work-with">
-        <a href="">Work with us</a>
-      </div>
-    </div>
-    <!-- End of Banner Text -->
-
-    <!-- Start of Banner Image -->
-    <div class="banner-img">
-        <img src="{% static 'img/home-3-689x469.png' %}" alt="Slide" />     
-
-
-    </div>
-    <!-- End of Banner Image -->
-  </div>
-  <!-- End of Banner Section -->
-
-
-  <!-- Start of About Us Section -->
-  <div class="about-us element padding">
-    <p>
-      Best Web Design Company in Ghana | Web Development | eCommerce | SEO
-    </p>
-    <h2>
-      World-class Web Design & <br />
-      <span>Digital Marketing Company</span>
-    </h2>
-    <p>
-        As a leading web design company in Ghana, recognized among the top ten web development firms <br> in the country, our team consistently helps businesses enhance their online presence. <br> We deliver tailored website design and digital marketing services <br> that align with client goals, driving effective results and boosting revenue.
-    </p>
-  </div>
-  <!-- End of About Us Section -->
-
-
-  <!-- Start of Our Services Section -->
-  <div class="our-service-container element padding">
-    <div class="heading">
-      <h2>Our Service</h2>
-    </div>
-    <div class="service-container">
-      <!-- Start of Service Item -->
-      <div class="service element">
-        <div class="s-col s-text">
-          <i class="fa-solid fa-computer"></i>
-          <h3>Web Development</h3>
-          <p>We specialize in delivering top-notch web development services that bring your vision to life. Our team builds robust, scalable, and user-friendly websites tailored to meet your specific business needs, ensuring a seamless online experience for your customers.</p>
-
-        </div>
-      </div>
-      <!-- End of Service Item -->
-      
-     <!-- Start of Service Item -->
-<div class="service element padding">
-    <div class="s-col s-text">
-      <i class="fa-solid fa-bullhorn"></i>
-      <h3>Digital Marketing</h3>
-      <p>
-        Boost your online presence with targeted digital marketing strategies designed to drive engagement and grow your business.
-      </p>
-    </div>
-  </div>
-  <!-- End of Service Item -->
-  
-      <!-- End of Service Item -->
-      
-    <!-- Start of Service Item -->
-<div class="service element padding">
-    <div class="s-col s-text">
-      <i class="fa-solid fa-palette"></i>
-      <h3>Graphic Design</h3>
-      <p>
-        Bring your brand to life with creative graphic design services that capture your vision and make a lasting impression.
-      </p>
-    </div>
-  </div>
-  <!-- End of Service Item -->
-  
-      <!-- End of Service Item -->
-    </div>
-  </div>
-  <!-- End of Our Services Section -->
-
-
-  <!-- Start of Empower Section -->
-  <div class="empower-container element padding">
-    <h2 class="element">
-      Empower Your Business with Our Simple, <br />
-      Efficient, and Affordable Tech Solutions From Web Design to IT Support,
-      We’ve Got You Covered.
-    </h2>
-    <div class="works">
+    <div class="work-with">
       <a href="">Work with us</a>
     </div>
   </div>
-  <!-- End of Empower Section -->
+  <!-- End of Banner Text -->
+
+  <!-- Start of Banner Image -->
+  <div class="banner-img">
+    <img src="{% static 'img/home-3-689x469.png' %}" alt="Slide" />
 
 
-  <!-- Start of Our Work Section -->
-  <div class="our-work-main-container element padding">
-    <h2>Projects We've Worked On</h2>
-    <div class="our-work">
-      <!-- Start of Work Item -->
-      <div class="work">
-        <img src="{% static 'img/work (2).png' %}" alt="Slide" />     
-
-       
-        <h3>Online Voting Platform</h3>
-        <div class="check-project">
-          <a href="">
-            <button>Check Out the Project</button>
-          </a>
-        </div>
-      </div>
-      <!-- End of Work Item -->
-      
-      <!-- Start of Work Item -->
-      <div class="work">
-        <img src="{% static 'img/Macbook-Air-www.gbstoregh.com (1).png' %}" alt="Slide" />     
-
-        <h3>E-ecommerce Website</h3>
-        <div class="check-project">
-          <a href="">
-            <button>Check Out the Project</button>
-          </a>
-        </div>
-      </div>
-      <!-- End of Work Item -->
-      
-      <!-- Start of Work Item -->
-      <div class="work">
-        <img src="{% static 'img/work3.png' %}" alt="Slide" />     
-
-       
-        <h3>Hope In Messiah
-            Needy Foundation</h3>
-        <div class="check-project">
-          <a href="">
-            <button>Check Out the Project</button>
-          </a>
-        </div>
-      </div>
-      <!-- End of Work Item -->
-      
-      <!-- Start of Work Item -->
-      <div class="work">
-        <img src="{% static 'img//work4.png' %}" alt="Slide" />     
-
-       
-        <h3>Website for Nakiv Fashion School</h3>
-        <div class="check-project">
-          <a href="">
-            <button>Check Out the Project</button>
-          </a>
-        </div>
-      </div>
-      <!-- End of Work Item -->
-    </div>
   </div>
-  <!-- End of Our Work Section --> 
+  <!-- End of Banner Image -->
+</div>
+<!-- End of Banner Section -->
 
 
+<!-- Start of About Us Section -->
+<div class="about-us element padding">
+  <p>
+    Best Web Design Company in Ghana | Web Development | eCommerce | SEO
+  </p>
+  <h2>
+    World-class Web Design & <br />
+    <span>Digital Marketing Company</span>
+  </h2>
+  <p>
+    As a leading web design company in Ghana, recognized among the top ten web development firms <br> in the country,
+    our team consistently helps businesses enhance their online presence. <br> We deliver tailored website design and
+    digital marketing services <br> that align with client goals, driving effective results and boosting revenue.
+  </p>
+</div>
+<!-- End of About Us Section -->
 
- <!-- End of Our Work Section --> 
- <div class="wrapper-container element padding">
-    <h3>What Clients Say</h3>
-    <div class="wrapper">
-      <i id="left" class="fa-solid fa-angle-left"></i>
-      <ul class="carousel">
-        <li class="card" draggable="false">
-          <div class="img"></div>
 
-          <h2>Blanche Pearson</h2>
-          <p>
-            "Outstanding service and top-notch web design! Highly
-            recommended."
-          </p>
-        </li>
-        <li class="card" draggable="false">
-          <div class="img"><img src="images/img-2.jpg" alt="img" /></div>
-          <h2>Joenas Brauers</h2>
-          <p>
-            "Outstanding service and top-notch web design! Highly
-            recommended."
-          </p>
-        </li>
-        <li class="card" draggable="false">
-          <div class="img"><img src="images/img-3.jpg" alt="img" /></div>
-          <h2>Lariach French</h2>
-          <p>
-            "Outstanding service and top-notch web design! Highly
-            recommended."
-          </p>
-        </li>
-        <li class="card" draggable="false">
-          <div class="img"><img src="images/img-4.jpg" alt="img" /></div>
-          <h2>James Khosravi</h2>
-          <p>
-            "Outstanding service and top-notch web design! Highly
-            recommended."
-          </p>
-        </li>
-        <li class="card" draggable="false">
-          <div class="img"><img src="images/img-5.jpg" alt="img" /></div>
-          <h2>Kristina Zasiadko</h2>
-          <p>
-            "Outstanding service and top-notch web design! Highly
-            recommended."
-          </p>
-        </li>
-        <li class="card" draggable="false">
-          <div class="img"><img src="images/img-6.jpg" alt="img" /></div>
-          <h2>Donald Horton</h2>
-          <p>
-            "Outstanding service and top-notch web design! Highly
-            recommended."
-          </p>
-        </li>
-      </ul>
-      <i id="right" class="fa-solid fa-angle-right"></i>
-    </div>
+<!-- Start of Our Services Section -->
+<div class="our-service-container element padding">
+  <div class="heading">
+    <h2>Our Service</h2>
   </div>
+  <div class="service-container">
+    <!-- Start of Service Item -->
+    <div class="service element">
+      <div class="s-col s-text">
+        <i class="fa-solid fa-computer"></i>
+        <h3>Web Development</h3>
+        <p>We specialize in delivering top-notch web development services that bring your vision to life. Our team
+          builds robust, scalable, and user-friendly websites tailored to meet your specific business needs, ensuring a
+          seamless online experience for your customers.</p>
+
+      </div>
+    </div>
+    <!-- End of Service Item -->
+
+    <!-- Start of Service Item -->
+    <div class="service element padding">
+      <div class="s-col s-text">
+        <i class="fa-solid fa-bullhorn"></i>
+        <h3>Digital Marketing</h3>
+        <p>
+          Boost your online presence with targeted digital marketing strategies designed to drive engagement and grow
+          your business.
+        </p>
+      </div>
+    </div>
+    <!-- End of Service Item -->
+
+    <!-- End of Service Item -->
+
+    <!-- Start of Service Item -->
+    <div class="service element padding">
+      <div class="s-col s-text">
+        <i class="fa-solid fa-palette"></i>
+        <h3>Graphic Design</h3>
+        <p>
+          Bring your brand to life with creative graphic design services that capture your vision and make a lasting
+          impression.
+        </p>
+      </div>
+    </div>
+    <!-- End of Service Item -->
+
+    <!-- End of Service Item -->
+  </div>
+</div>
+<!-- End of Our Services Section -->
 
 
-    <!-- blog page -->
-    <div class="our-blog-container padding element">
-        <h2>Our Blog</h2>
-        <div class="blog-container">
-          <a  href="{% url 'blogDetail' %}">
-            <div class="blog ">
-            
-              <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
-  
-              <div class="writer">
-                <!-- writter image -->
-                <img src="img/image.png" alt="" />
-                <!-- writter name -->
-                <p>Benjamin Asare</p>
-              </div>
-              <div class="blog-heading">
-                <h4>
-                  The Top 7 Website Design Mistakes Killing Your Conversions
-                </h4>
-                <p>
-                  In today’s digital landscape, your website is your storefront.
-                  Just like a…
-                </p>
-              </div>
-              <div class="news">
-              <p>read more</p>
-              </div>
-            </div>
-          </a>
-          <a  href="{% url 'blogDetail' %}">
-            <div class="blog ">
-                         <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
-  
-  
-              <div class="writer">
-                <!-- writter image -->
-                <img src="img/image.png" alt="" />
-                <!-- writter name -->
-                <p>Benjamin Asare</p>
-              </div>
-              <div class="blog-heading">
-                <h4>
-                  The Top 7 Website Design Mistakes Killing Your Conversions
-                </h4>
-                <p>
-                  In today’s digital landscape, your website is your storefront.
-                  Just like a…
-                </p>
-              </div>
-              <div class="news">
-              <p>read more</p>
-              </div>
-            </div>
-          </a>
-          <a  href="{% url 'blogDetail' %}">
-            <div class="blog ">
-                         <img src="{% static 'img/banne2.jpg' %}" alt="Slide" />     
-  
-  
-              <div class="writer">
-                <!-- writter image -->
-                <img src="img/image.png" alt="" />
-                <!-- writter name -->
-                <p>Benjamin Asare</p>
-              </div>
-              <div class="blog-heading">
-                <h4>
-                  The Top 7 Website Design Mistakes Killing Your Conversions
-                </h4>
-                <p>
-                  In today’s digital landscape, your website is your storefront.
-                  Just like a…
-                </p>
-              </div>
-              <div class="news">
-              <p>read more</p>
-              </div>
-            </div>
-          </a>
+<!-- Start of Empower Section -->
+<div class="empower-container element padding">
+  <h2 class="element">
+    Empower Your Business with Our Simple, <br />
+    Efficient, and Affordable Tech Solutions From Web Design to IT Support,
+    We’ve Got You Covered.
+  </h2>
+  <div class="works">
+    <a href="">Work with us</a>
+  </div>
+</div>
+<!-- End of Empower Section -->
+
+
+<!-- Start of Our Work Section -->
+<div class="our-work-main-container element padding">
+  <h2>Projects We've Worked On</h2>
+  <div class="our-work">
+
+    {% for our_work in our_works %}
+    <!-- Start of Work Item -->
+    <div class="work">
+      <img src="{{ our_work.image.url }}" alt="Slide" />
+
+
+      <h3>{{ our_work.title }}</h3>
+      <div class="check-project">
+        <a href="{{ our_work.link }}">
+          <button>Check Out the Project</button>
+        </a>
+      </div>
+    </div>
+    <!-- End of Work Item -->
+
+    {% endfor %}
+
+  </div>
+</div>
+<!-- End of Our Work Section -->
+
+
+
+<!-- End of Our Work Section -->
+<div class="wrapper-container element padding">
+  <h3>What Clients Say</h3>
+  <div class="wrapper">
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <ul class="carousel">
+      {% for testimonial in testimonials %}
+      <li class="card" draggable="false">
+        <div class="img"><img src="{{ testimonial.image.url }}" alt="img"></div>
+
+        <h2>{{ testimonial.name }}</h2>
+        <p>
+          {{ testimonial.content }}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+    <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+</div>
+
+
+<!-- blog page -->
+<div class="our-blog-container padding element">
+  <h2>Our Blog</h2>
+  <div class="blog-container">
+    {% for homeblog in homeblogs %}
+    <a href="{% url 'blog_detail' homeblog.slug %}">
+      <div class="blog ">
+
+        <img src="{{ homeblog.image.url }}" alt="Slide" />
+
+        <div class="writer">
+          <!-- writter image -->
+          <img src="{{ homeblog.profile_image.url }}" alt="" />
+          <!-- writter name -->
+          <p>{{ homeblog.author }}</p>
+        </div>
+        <div class="blog-heading">
+          <h4>
+            {{ homeblog.title }}
+          </h4>
+          <p id="text-element">
+            {{ homeblog.article }}
+          </p>
+        </div>
+        <div class="news">
+          <p>read more</p>
         </div>
       </div>
-  
-  
-  
+    </a>
+    {% endfor %}
+  </div>
+</div>
 
 
+
+
+<script>
+  function truncateText(selector, maxLength) {
+    const element = document.querySelector(selector);
+    const text = element.textContent;
+    if (text.length > maxLength) {
+      element.textContent = text.slice(0, maxLength) + '...';
+    }
+  }
+  truncateText('#text-element', 120); // Truncate text to 120 charactors
+</script>
 
 {% endblock %}

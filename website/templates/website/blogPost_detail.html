@@ -1,0 +1,60 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+<div class="blog-detail-page">
+    <div class="blog-img">
+
+        <img src="{{ blog.image.url }}" alt="Slide" />
+
+    </div>
+    <div class="blog-detail">
+        <h1 style="text-align: center;">{{ blog.title }}</h1>
+        <br>
+        <br>
+        <p style="line-height: 2em;">
+            {{blog.article}}
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+    function handleAnimationScroll() {
+        // This block of code handles the reveal animation for elements on scroll
+        window.addEventListener("scroll", () => {
+            const targetElements = document.querySelectorAll(".element");
+
+            targetElements.forEach((element) => {
+                const position = element.getBoundingClientRect();
+                const threshold = window.innerHeight * 0.9;
+
+                // If the element's position is within the threshold, reveal it and trigger animation
+                if (position.top <= threshold) {
+                    element.classList.add("slides");
+                }
+            });
+        });
+    }
+    handleAnimationScroll();
+</script>
+{% endblock %}

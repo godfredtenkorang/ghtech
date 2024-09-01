@@ -44,67 +44,24 @@
   <div class="our-work-main-container element padding">
     <h2>Projects We've Worked On</h2>
     <div class="our-work">
+
+      {% for our_work in our_works %}
       <!-- Start of Work Item -->
       <div class="work">
-        <img src="{% static 'img/work (2).png' %}" alt="Slide" />     
+        <img src="{{ our_work.image.url }}" alt="Slide" />     
 
        
-        <h3>Online Voting Platform</h3>
+        <h3>{{ our_work.title }}</h3>
         <div class="check-project">
-          <a href="">
+          <a href="{{ our_work.link }}">
             <button>Check Out the Project</button>
           </a>
         </div>
       </div>
       <!-- End of Work Item -->
-      
-      <!-- Start of Work Item -->
-      <div class="work">
-        <img src="{% static 'img/Macbook-Air-www.gbstoregh.com (1).png' %}" alt="Slide" />     
-
-        <h3>Online Voting Platform</h3>
-        <div class="check-project">
-          <a href="">
-            <button>Check Out the Project</button>
-          </a>
-        </div>
-      </div>
-      <!-- End of Work Item -->
-      
-      <!-- Start of Work Item -->
-      <div class="work">
-        <img src="{% static 'img/work3.png' %}" alt="Slide" />     
-
-       
-        <h3>Online Voting Platform</h3>
-        <div class="check-project">
-          <a href="">
-            <button>Check Out the Project</button>
-          </a>
-        </div>
-      </div>
-      <!-- End of Work Item -->
-      
-      <!-- Start of Work Item -->
-      <div class="work">
-        <img src="{% static 'img//work4.png' %}" alt="Slide" />     
-
-       
-        <h3>Online Voting Platform</h3>
-        <div class="check-project">
-          <a href="">
-            <button>Check Out the Project</button>
-          </a>
-        </div>
-      </div>
-      <!-- End of Work Item -->
+       {% endfor %}
     </div>
   </div>
-  <!-- End of Our Work Section --> 
-
-
-
-
 
     <script>
     

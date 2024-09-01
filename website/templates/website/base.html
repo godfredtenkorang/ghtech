@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'website/style.css' %}">
+    {% if title %}
+    <title>GB Tech - {{ title }}</title>
+    {% else %}
     <title>GB Tech</title>
+    {% endif %}
 
     <!-- font awesome -->
     <link
@@ -67,10 +71,10 @@
       <div class="nav-link">
         <ul class="nav-links">
           <li><a  href="{% url 'index' %}">Home</a></li>
+          <li><a  href="{% url 'aboutUs' %}">About Us</a></li>
           <li><a  href="{% url 'ourWork' %}">Our Work</a></li>
           <li><a href="{% url 'service' %}">Service</a></li>
-          <li><a  href="{% url 'aboutUs' %}">About Us</a></li>
-          <li><a  href="{% url ' contact' %}">Contact</a></li>
+          <li><a  href="{% url 'contact' %}">Contact</a></li>
           <li><a  href="{% url 'blog' %}">Blog</a></li>
        
         <div class="remove click">
@@ -130,8 +134,9 @@
 
       <div class="news-letter footer-col">
         <h5>News Letter</h5>
-        <form action="">
-          <input type="text" placeholder="Email" />
+        <form method="POST">
+          {% csrf_token %}
+          <input type="email" name="email" placeholder="Email" />
           <button>Subscribe</button>
         </form>
       </div>
