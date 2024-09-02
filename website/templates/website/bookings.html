@@ -1,0 +1,123 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<!-- Start of Banner Section -->
+<div class="banner-container padding">
+    <!-- Start of Banner Text -->
+    <div class="banner-text">
+        <h1>Book Us for Expert Web Development & IT Solutions</h1>
+
+        <p>Ready to elevate your business with top-tier web development and IT solutions? Our team is here to bring your vision to life. Whether you're aiming to build a cutting-edge website or need comprehensive IT support, we're dedicated to delivering innovative, reliable, and scalable solutions tailored to your unique needs. Book us today and let's create something extraordinary together.</p>
+        
+  
+      <div class="work-with">
+        <a href="#bookings">Work with us</a>
+      </div>
+    </div>
+    <!-- End of Banner Text -->
+  
+    <!-- Start of Banner Image -->
+    <div class="banner-img">
+      <img src="{% static 'img/booking.png' %}" alt="Slide" />
+  
+  
+    </div>
+    <!-- End of Banner Image -->
+  </div>
+  <!-- End of Banner Section -->
+  
+
+
+
+
+  <div class="booking-container" id="bookings">
+
+  
+    <form action="">
+        <p>Please fill out the form below to book us</p>
+    
+        <div class="input-containers">
+            <div class="inputs">
+                <label for="first-name">First Name</label> <br>
+                <input type="text" id="first-name" placeholder="Benjamin" required>
+            </div>
+            <div class="inputs">
+                <label for="last-name">Last Name</label> <br>
+                <input type="text" id="last-name" placeholder="Asare" required>
+            </div>
+        </div>
+    
+        <div class="input-containers">
+            <div class="inputs">
+                <label for="email">Email Address</label> <br>
+                <input type="email" id="email" placeholder="benjamin@example.com" required>
+            </div>
+            <div class="inputs">
+                <label for="phone-number">Phone Number</label> <br>
+                <input type="tel" id="phone-number" placeholder="+1234567890" required>
+            </div>
+        </div>
+    
+        <div class="inputs">
+            <label for="company-name">Company Name (Optional)</label> <br>
+            <input type="text" id="company-name" placeholder="Your Company">
+        </div>
+    
+        <div class="inputs">
+            <label for="project-type">Project Type</label> <br>
+            <input type="text" id="project-type" placeholder="Website Design, Redesign, etc." required>
+        </div>
+    
+        <div class="inputs">
+            <label for="project-description">Project Description</label> <br>
+            <textarea id="project-description" placeholder="Brief description of your project and objectives" required></textarea>
+        </div>
+    
+        <div class="inputs">
+            <label for="website-url">Existing Website URL (if any)</label> <br>
+            <input type="url" id="website-url" placeholder="http://www.example.com">
+        </div>
+    
+        <div class="inputs">
+            <label for="deadline">Desired Deadline</label> <br>
+            <input type="date" id="deadline" required>
+        </div>
+    
+        <div class="inputs">
+            <label for="budget">Estimated Budget</label> <br>
+            <input type="text" id="budget" placeholder="Your budget range" required>
+        </div>
+    
+        <div class="inputs">
+            <label for="start-date">Preferred Start Date</label> <br>
+            <input type="date" id="start-date" required>
+        </div>
+    
+        <div class="inputs">
+            <label for="additional-notes">Additional Notes or Requests</label> <br>
+            <textarea id="additional-notes" placeholder="Anything else you'd like to mention"></textarea>
+        </div>
+    
+        <button type="submit">Send</button>
+    </form>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

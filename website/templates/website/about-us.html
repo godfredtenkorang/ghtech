@@ -1,181 +1,435 @@
-
-{% extends 'website/base.html' %}
-{% load static %}
-
-{% block content %}
+{% extends 'website/base.html' %} {% load static %} {% block content %}
 
 <style>
   .empower-container {
-      position: relative;
-      min-height: 70vh;
-      background-image: linear-gradient(to right, rgba(34, 0, 45, 0.9) 40%, rgba(0,0,0,0.4) 80%), 
-                        url("{% static 'img/buss.jpg' %}");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      display: flex;
-      justify-content: center;
-      padding: 10px 8%;
-      flex-direction: column;
+    position: relative;
+    min-height: 70vh;
+    background-image: linear-gradient(
+        to right,
+        rgba(34, 0, 45, 0.9) 40%,
+        rgba(0, 0, 0, 0.4) 80%
+      ),
+      url("{% static 'img/buss.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 8%;
+    flex-direction: column;
   }
 </style>
 
-
-  <!-- Start of Banner Section -->
-  <div class="banner-container">
-    <!-- Start of Banner Text -->
-    <div class="banner-text">
-      <h1>
-      
-We Are GB Technology,
-Your Trusted IT
-Partner
-      </h1>
-      <p>
-        GB Technology provides leading Software Solutions, Website Development,
-        Digital Marketing, Corporate Branding, Training, and Consultation
-        services to help businesses grow and expand.
-      </p>
-      <div class="work-with">
-        <a href="">Work with us</a>
-      </div>
+<!-- Start of Banner Section -->
+<div class="banner-container">
+  <!-- Start of Banner Text -->
+  <div class="banner-text">
+    <h1>We Are GB Technology, Your Trusted IT Partner</h1>
+    <p>
+      GB Technology provides leading Software Solutions, Website Development,
+      Digital Marketing, Corporate Branding, Training, and Consultation services
+      to help businesses grow and expand.
+    </p>
+    <div class="work-with">
+      <a href="{% url 'booking' %}">Work with us</a>
     </div>
-    <!-- End of Banner Text -->
-
-    <!-- Start of Banner Image -->
-    <div class="banner-img">
-      <img src="{% static 'img/home-3-689x469.png' %}" alt="Slide" />   
-
-    </div>
-    <!-- End of Banner Image -->
   </div>
-  <!-- End of Banner Section -->
+  <!-- End of Banner Text -->
 
+  <!-- Start of Banner Image -->
+  <div class="banner-img">
+    <img src="{% static 'img/home-3-689x469.png' %}" alt="Slide" />
+  </div>
+  <!-- End of Banner Image -->
+</div>
+<!-- End of Banner Section -->
 
 <!-- Start of About Us Section -->
 <div class="about-us element">
-  <p>
-    Best Web Design Company in Ghana | Web Development | eCommerce | SEO
-  </p>
+  <p>Best Web Design Company in Ghana | Web Development | eCommerce | SEO</p>
   <h2>
     World-class Web Design & <br />
     <span>Digital Marketing Company</span>
   </h2>
   <p>
-      As a leading web design company in Ghana, recognized among the top ten web development firms <br> in the country, our team consistently helps businesses enhance their online presence. <br> We deliver tailored website design and digital marketing services <br> that align with client goals, driving effective results and boosting revenue.
+    As a leading web design company in Ghana, recognized among the top ten web
+    development firms <br />
+    in the country, our team consistently helps businesses enhance their online
+    presence. <br />
+    We deliver tailored website design and digital marketing services <br />
+    that align with client goals, driving effective results and boosting
+    revenue.
   </p>
 </div>
 <!-- End of About Us Section -->
 
-
-
 <div class="about-us-main element">
   <div class="about-us-page-text">
     <h2>Who We Are</h2>
-    <p>We are a dynamic web development agency dedicated to creating impactful digital experiences. With a commitment to excellence, we blend creativity and technology to help businesses thrive in the digital age.</p>
-    
+    <p>
+      We are a dynamic web development agency dedicated to creating impactful
+      digital experiences. With a commitment to excellence, we blend creativity
+      and technology to help businesses thrive in the digital age.
+    </p>
+
     <div class="about-col">
       <h4>Our Mission</h4>
-      <p>Our mission is to empower businesses globally by delivering innovative web solutions that drive growth and success. We strive to create inclusive digital environments where companies of all sizes can excel and reach their full potential.</p>
+      <p>
+        Our mission is to empower businesses globally by delivering innovative
+        web solutions that drive growth and success. We strive to create
+        inclusive digital environments where companies of all sizes can excel
+        and reach their full potential.
+      </p>
     </div>
-    
+
     <div class="about-col">
       <h4>Our Vision</h4>
-      <p>Our vision is to lead the way in digital transformation, fostering a future where technology enables small businesses to compete on an equal footing with industry leaders. We aim to inspire innovation and inclusivity, paving the path to extraordinary success in the tech-driven world.</p>
+      <p>
+        Our vision is to lead the way in digital transformation, fostering a
+        future where technology enables small businesses to compete on an equal
+        footing with industry leaders. We aim to inspire innovation and
+        inclusivity, paving the path to extraordinary success in the tech-driven
+        world.
+      </p>
     </div>
-</div>
-
+  </div>
 
   <div class="about-us-page-img">
- 
-    <img src="{% static 'img/Asset-2-800x501.png' %}" alt="Slide" />   
-
+    <img src="{% static 'img/Asset-2-800x501.png' %}" alt="Slide" />
   </div>
 </div>
-
 
 <!-- Why Choose Us -->
 <div class="why-choose-us-container element">
   <h2>Why Partner with GB Technology?</h2>
-  <p>Partner with GB Technology to elevate your business in the digital landscape. <br> We combine innovative strategies with a customer-centric approach to help you thrive and stand out online.</p>
+  <p>
+    Partner with GB Technology to elevate your business in the digital
+    landscape. <br />
+    We combine innovative strategies with a customer-centric approach to help
+    you thrive and stand out online.
+  </p>
 
   <div class="why-choose">
     <div class="why element">
       <i class="fa-solid fa-gear"></i>
       <h4>Cutting-Edge Solutions</h4>
-      <p>Harness the power of innovation with our forward-thinking solutions designed to propel your business towards success. We focus on creative strategies that keep you ahead of the competition.</p>
+      <p>
+        Harness the power of innovation with our forward-thinking solutions
+        designed to propel your business towards success. We focus on creative
+        strategies that keep you ahead of the competition.
+      </p>
     </div>
 
     <div class="why element">
       <i class="fa-solid fa-clock"></i>
       <h4>On-Time Project Delivery</h4>
-      <p>Count on GB Technology for timely project completions. We understand the importance of deadlines and consistently deliver on time, ensuring your business operations run smoothly.</p>
+      <p>
+        Count on GB Technology for timely project completions. We understand the
+        importance of deadlines and consistently deliver on time, ensuring your
+        business operations run smoothly.
+      </p>
     </div>
 
     <div class="why element">
       <i class="fa-solid fa-thumbs-up"></i>
       <h4>Guaranteed Satisfaction</h4>
-      <p>Your satisfaction is our top priority. We go the extra mile to ensure you receive the highest value for your investment, with services tailored to meet your unique needs.</p>
+      <p>
+        Your satisfaction is our top priority. We go the extra mile to ensure
+        you receive the highest value for your investment, with services
+        tailored to meet your unique needs.
+      </p>
     </div>
 
     <div class="why element">
       <i class="fa-solid fa-money-bill-trend-up"></i>
       <h4>Competitive Pricing</h4>
-      <p>Benefit from our competitive and transparent pricing. We offer affordable rates without compromising on quality, providing exceptional value for your business.</p>
+      <p>
+        Benefit from our competitive and transparent pricing. We offer
+        affordable rates without compromising on quality, providing exceptional
+        value for your business.
+      </p>
     </div>
 
     <div class="why element">
       <i class="fa-solid fa-user-group"></i>
       <h4>Friendly and Approachable Team</h4>
-      <p>Experience a collaborative and friendly working relationship. Our team is dedicated to making the process enjoyable and straightforward, ensuring you feel supported every step of the way.</p>
+      <p>
+        Experience a collaborative and friendly working relationship. Our team
+        is dedicated to making the process enjoyable and straightforward,
+        ensuring you feel supported every step of the way.
+      </p>
     </div>
 
     <div class="why element">
       <i class="fa-solid fa-phone"></i>
       <h4>24/7 Dedicated Support</h4>
-      <p>Our expert technical and customer support team is available around the clock to assist you. Whether you need help or have questions, we're here to provide immediate, reliable support.</p>
+      <p>
+        Our expert technical and customer support team is available around the
+        clock to assist you. Whether you need help or have questions, we're here
+        to provide immediate, reliable support.
+      </p>
     </div>
   </div>
 </div>
 
+<!-- Start of Empower Section -->
+<div class="empower-container element">
+  <h2 class="element">
+    Empower Your Business with Our Simple, <br />
+    Efficient, and Affordable Tech Solutions From Web Design to IT Support,
+    We’ve Got You Covered.
+  </h2>
+  <div class="works">
+    <a href="">Work with us</a>
+  </div>
+</div>
+<!-- End of Empower Section -->
 
+<!-- team -->
+<div class="team-main-container element">
+  <h3>Our Team</h3>
 
-  <!-- Start of Empower Section -->
-  <div class="empower-container element">
-    <h2 class="element">
-      Empower Your Business with Our Simple, <br />
-      Efficient, and Affordable Tech Solutions From Web Design to IT Support,
-      We’ve Got You Covered.
-    </h2>
-    <div class="works">
-      <a href="">Work with us</a>
+  <div class="team-container">
+    <div class="team element">
+      <!-- team image -->
+      <div class="team-img">
+        <img src="{% static 'img/teams.jpg' %}" alt="Slide" />
+      </div>
+      <!-- team name -->
+      <p class="team-member-name">Benjamin Asare</p>
+      <!-- team position -->
+      <p>Lead Frontend Developer</p>
+      <div class="team-social-media">
+      
+
+        <li>
+          <a href=""><i class="fa-brands fa-facebook"></i> </a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-tiktok"></i> </a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-x"></i> </a>
+        
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-github"></i> </a>
+        
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-globe"></i></i> </a>
+        
+        </li>
+      </div>
+
+    </div>
+    <div class="team element">
+      <!-- team image -->
+      <div class="team-img">
+        <img src="{% static 'img/team2.jpg' %}" alt="Slide" />
+      </div>
+      <!-- team name -->
+      <p class="team-member-name">Godred Nana Yaw Tenkorang</p>
+      <!-- team position -->
+      <p>Lead Backend Developer</p>
+      <div class="team-social-media">
+      
+
+        <li>
+          <a href=""><i class="fa-brands fa-facebook"></i> </a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-tiktok"></i> </a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-x"></i> </a>
+        
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-github"></i> </a>
+        
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-globe"></i></i> </a>
+        
+        </li>
+      </div>
+
+    </div>
+    <div class="team element">
+      <!-- team image -->
+      <div class="team-img">
+        <img src="{% static 'img/teams.jpg' %}" alt="Slide" />
+      </div>
+      <!-- team name -->
+      <p class="team-member-name">Benjamin Asare</p>
+      <!-- team position -->
+      <p>Lead Frontend Developer</p>
+      <div class="team-social-media">
+      
+
+        <li>
+          <a href=""><i class="fa-brands fa-facebook"></i> </a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-tiktok"></i> </a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-x"></i> </a>
+        
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-github"></i> </a>
+        
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-globe"></i></i> </a>
+        
+        </li>
+      </div>
+
+    </div>
+    <div class="team element">
+      <!-- team image -->
+      <div class="team-img">
+        <img src="{% static 'img/teams.jpg' %}" alt="Slide" />
+      </div>
+      <!-- team name -->
+      <p class="team-member-name">Benjamin Asare</p>
+      <!-- team position -->
+      <p>Lead Frontend Developer</p>
+      <div class="team-social-media">
+      
+
+        <li>
+          <a href=""><i class="fa-brands fa-facebook"></i> </a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-tiktok"></i> </a>
+         
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-x"></i> </a>
+        
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-github"></i> </a>
+        
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-globe"></i></i> </a>
+        
+        </li>
+      </div>
+
+    </div>
+   
+  </div>
+</div>
+
+<!-- <div class="team-pop-container">
+  <div class="team-detail-container">
+   <div class="teams">
+    <div class="team-imgs">
+    
+    </div>
+    <div class="team-d">
+     
+       <p class="team-member-name-container"> </p>
+       <p> <span>Phone Number:</span> Benjamin Ohene Asare</p>
+       <p> <span>Email:</span> kojosweetonline@gmail.com</p>
+     
+       <p> <span>Position</span> Lead Frontend Developer</p>
+       <p> <span>Programme</span> Business Information Tech</p>
+
+       <div class="team-social-media">
+      
+
+        <li>
+          <a href=""><i class="fa-brands fa-facebook"></i> </a>
+          <span>Follow on Facebook</span>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <span>Follow on instagram</span>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-tiktok"></i> </a>
+          <span>Follow on Tiktok</span>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-x"></i> </a>
+          <span>Follow on X</span>
+        </li>
+      </div>
+
+     
+    </div>
+   </div>
+    <div class="about-team-detail">
+      <p>I am a passionate and detail-oriented developer specializing in frontend and backend technologies. With a strong foundation in HTML, CSS, JavaScript, and Python, I create dynamic, responsive web applications that provide seamless user experiences. I thrive on solving complex problems with innovative solutions and am committed to staying updated with the latest industry trends. Whether collaborating in a team or working independently, I bring creativity, dedication, and a love for coding to every project I undertake.
+
+      </p>
     </div>
   </div>
-  <!-- End of Empower Section -->
+</div> -->
+
+<script>
+  function handleAnimationScroll() {
+    // This block of code handles the reveal animation for elements on scroll
+    window.addEventListener("scroll", () => {
+      const targetElements = document.querySelectorAll(".element");
+
+      targetElements.forEach((element) => {
+        const position = element.getBoundingClientRect();
+        const threshold = window.innerHeight * 0.9;
+
+        // If the element's position is within the threshold, reveal it and trigger animation
+        if (position.top <= threshold) {
+          element.classList.add("slides");
+        }
+      });
+    });
+  }
+  handleAnimationScroll();
+</script>
 
 
+<!-- <script>
+  function teamDetail(button){
+    const team = document.querySelector(".team-imgs")
+    const teamcontainer  = document.querySelector(".team-pop-container")
+    const teammembernamecontainer = document.querySelector(".team-member-name-container")
+    teamcontainer.style.display="block"
 
-
-    <script>
-    
-
-      function handleAnimationScroll() {
-        // This block of code handles the reveal animation for elements on scroll
-        window.addEventListener("scroll", () => {
-          const targetElements = document.querySelectorAll(".element");
-
-          targetElements.forEach((element) => {
-            const position = element.getBoundingClientRect();
-            const threshold = window.innerHeight * 0.9;
-
-            // If the element's position is within the threshold, reveal it and trigger animation
-            if (position.top <= threshold) {
-              element.classList.add("slides");
-            }
-          });
-        });
-      }
-      handleAnimationScroll();
-    </script>
-  
+    const teamElement = button.closest('.team')
+    const teamImgae = teamElement.querySelector('.team-img img')
+    const teammemberName = teamElement.querySelector(".team-member-name" )
+    team.appendChild(teamImgae)
+    teammembernamecontainer.appendChild(teammemberName)
+  }
+</script> -->
 {% endblock %}
