@@ -81,7 +81,7 @@
             <i class="fa-solid fa-xmark"></i>
         </div>
         </ul>
-        <li class="work-with-us"><a href="">Work With Us</a></li>
+        <li class="work-with-us"><a href="{% url 'booking' %}">Work With Us</a></li>
       
         <!-- Start of Menu Icon -->
         <div class="menu-icon click">
@@ -134,6 +134,7 @@
 
       <div class="news-letter footer-col">
         <h5>News Letter</h5>
+        <p>Subscribe to Our Newsletter to get Important News, Amazing Offers & More </p>
         <form method="POST">
           {% csrf_token %}
           <input type="email" name="email" placeholder="Email" />

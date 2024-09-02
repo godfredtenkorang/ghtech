@@ -109,3 +109,8 @@ def service(request):
         'title': 'Services'
     }
     return render(request, 'website/service.html', context)
+
+
+
+def booking(request):
+    return render(request, 'website/bookings.html')
