@@ -20,6 +20,7 @@ def index(request):
     return render(request, 'website/index.html', context)
 
 def aboutUs(request):
+    teams = Team.objects.all()
     if request.method == 'POST':
         email = request.POST['email']
         
@@ -28,6 +29,7 @@ def aboutUs(request):
         return redirect('aboutUs')
     
     context = {
+        'teams': teams,
         'title': 'About Us'
     }
     return render(request, 'website/about-us.html', context)
@@ -113,4 +115,21 @@ def service(request):
 
 
 def booking(request):
+    if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        email = request.POST['email']
+        phone_number = request.POST['phone_number']
+        company_name = request.POST['company_name']
+        project_type = request.POST['project_type']
+        project_description = request.POST['project_description']
+        existing_website = request.POST['existing_website']
+        desired_deadline = request.POST['desired_deadline']
+        estimated_budget = request.POST['estimated_budget']
+        preferred_start_date = request.POST['preferred_start_date']
+        additional_notes = request.POST['additional_notes']
+        
+        bookings = Booking(first_name=first_name, last_name=last_name, email=email, phone_number=phone_number, company_name=company_name, project_type=project_type, project_description=project_description, existing_website=existing_website, desired_deadline=desired_deadline, estimated_budget=estimated_budget, preferred_start_date=preferred_start_date, additional_notes=additional_notes)
+        bookings.save()
+        return redirect('booking')
     return render(request, 'website/bookings.html')

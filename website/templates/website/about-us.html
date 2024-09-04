@@ -180,7 +180,7 @@
     We’ve Got You Covered.
   </h2>
   <div class="works">
-    <a href="">Work with us</a>
+    <a href="{% url 'booking' %}">Work with us</a>
   </div>
 </div>
 <!-- End of Empower Section -->
@@ -190,162 +190,47 @@
   <h3>Our Team</h3>
 
   <div class="team-container">
+    {% for team in teams %}
     <div class="team element">
       <!-- team image -->
       <div class="team-img">
-        <img src="{% static 'img/teams.jpg' %}" alt="Slide" />
+        <img src="{{ team.image.url }}" alt="Slide" />
       </div>
       <!-- team name -->
-      <p class="team-member-name">Benjamin Asare</p>
+      <p class="team-member-name">{{ team.name }}</p>
       <!-- team position -->
-      <p>Lead Frontend Developer</p>
+      <p>{{ team.position }}</p>
       <div class="team-social-media">
       
 
         <li>
-          <a href=""><i class="fa-brands fa-facebook"></i> </a>
+          <a href="{{ team.facebook_link }}"><i class="fa-brands fa-facebook"></i> </a>
          
         </li>
         <li>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href="{{ team.instagram_link }}"><i class="fa-brands fa-instagram"></i></a>
          
         </li>
         <li>
-          <a href=""><i class="fa-brands fa-tiktok"></i> </a>
+          <a href="{{ team.tiktok_link }}"><i class="fa-brands fa-tiktok"></i> </a>
          
         </li>
         <li>
-          <a href=""><i class="fa-brands fa-x"></i> </a>
+          <a href="{{ team.x_link }}"><i class="fa-brands fa-x"></i> </a>
         
         </li>
         <li>
-          <a href=""><i class="fa-brands fa-github"></i> </a>
+          <a href="{{ team.github_link }}"><i class="fa-brands fa-github"></i> </a>
         
         </li>
         <li>
-          <a href=""><i class="fa-solid fa-globe"></i></i> </a>
+          <a href="{{ team.website_link }}"><i class="fa-solid fa-globe"></i></i> </a>
         
         </li>
       </div>
 
     </div>
-    <div class="team element">
-      <!-- team image -->
-      <div class="team-img">
-        <img src="{% static 'img/team2.jpg' %}" alt="Slide" />
-      </div>
-      <!-- team name -->
-      <p class="team-member-name">Godred Nana Yaw Tenkorang</p>
-      <!-- team position -->
-      <p>Lead Backend Developer</p>
-      <div class="team-social-media">
-      
-
-        <li>
-          <a href=""><i class="fa-brands fa-facebook"></i> </a>
-         
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
-         
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-tiktok"></i> </a>
-         
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-x"></i> </a>
-        
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-github"></i> </a>
-        
-        </li>
-        <li>
-          <a href=""><i class="fa-solid fa-globe"></i></i> </a>
-        
-        </li>
-      </div>
-
-    </div>
-    <div class="team element">
-      <!-- team image -->
-      <div class="team-img">
-        <img src="{% static 'img/teams.jpg' %}" alt="Slide" />
-      </div>
-      <!-- team name -->
-      <p class="team-member-name">Benjamin Asare</p>
-      <!-- team position -->
-      <p>Lead Frontend Developer</p>
-      <div class="team-social-media">
-      
-
-        <li>
-          <a href=""><i class="fa-brands fa-facebook"></i> </a>
-         
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
-         
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-tiktok"></i> </a>
-         
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-x"></i> </a>
-        
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-github"></i> </a>
-        
-        </li>
-        <li>
-          <a href=""><i class="fa-solid fa-globe"></i></i> </a>
-        
-        </li>
-      </div>
-
-    </div>
-    <div class="team element">
-      <!-- team image -->
-      <div class="team-img">
-        <img src="{% static 'img/teams.jpg' %}" alt="Slide" />
-      </div>
-      <!-- team name -->
-      <p class="team-member-name">Benjamin Asare</p>
-      <!-- team position -->
-      <p>Lead Frontend Developer</p>
-      <div class="team-social-media">
-      
-
-        <li>
-          <a href=""><i class="fa-brands fa-facebook"></i> </a>
-         
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
-         
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-tiktok"></i> </a>
-         
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-x"></i> </a>
-        
-        </li>
-        <li>
-          <a href=""><i class="fa-brands fa-github"></i> </a>
-        
-        </li>
-        <li>
-          <a href=""><i class="fa-solid fa-globe"></i></i> </a>
-        
-        </li>
-      </div>
-
-    </div>
+    {% endfor %}
    
   </div>
 </div>

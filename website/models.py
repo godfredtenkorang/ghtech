@@ -83,3 +83,41 @@ class Testimonial(models.Model):
         
     def __str__(self):
         return self.name
+    
+
+class Booking(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone_number = models.CharField(max_length=20)
+    company_name = models.CharField(max_length=250, blank=True, null=True)
+    project_type = models.CharField(max_length=200)
+    project_description = models.TextField()
+    existing_website = models.CharField(max_length=200)
+    desired_deadline = models.CharField(max_length=20)
+    estimated_budget = models.CharField(max_length=20)
+    preferred_start_date = models.CharField(max_length=20)
+    additional_notes = models.TextField(null=True, blank=True)
+    
+    class Meta:
+        verbose_name_plural = "Bookings"
+        
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+    
+class Team(models.Model):
+    image = models.ImageField(upload_to='team-img')
+    name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    facebook_link = models.URLField(null=True, blank=True)
+    instagram_link = models.URLField(null=True, blank=True)
+    tiktok_link = models.URLField(null=True, blank=True)
+    x_link = models.URLField(null=True, blank=True)
+    github_link = models.URLField(null=True, blank=True)
+    website_link = models.URLField(null=True, blank=True)
+    
+    class Meta:
+        verbose_name_plural = "Our Team"
+        
+    def __str__(self):
+        return f"{self.name} - {self.position}"
